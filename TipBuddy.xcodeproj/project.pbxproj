@@ -10,9 +10,11 @@
 		A228196C2B398AE10046CF1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196B2B398AE10046CF1C /* AppDelegate.swift */; };
 		A228196E2B398AE10046CF1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196D2B398AE10046CF1C /* SceneDelegate.swift */; };
 		A22819702B398AE10046CF1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196F2B398AE10046CF1C /* ViewController.swift */; };
-		A22819732B398AE10046CF1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22819712B398AE10046CF1C /* Main.storyboard */; };
 		A22819752B398AE20046CF1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A22819742B398AE20046CF1C /* Assets.xcassets */; };
 		A22819782B398AE20046CF1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22819762B398AE20046CF1C /* LaunchScreen.storyboard */; };
+		A23C86482B3B38810029C456 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A23C86472B3B38810029C456 /* CombineCocoa */; };
+		A23C864B2B3B38DF0029C456 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A23C864A2B3B38DF0029C456 /* SnapKit */; };
+		A23C864D2B3B38DF0029C456 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A23C864C2B3B38DF0029C456 /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +22,6 @@
 		A228196B2B398AE10046CF1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A228196D2B398AE10046CF1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A228196F2B398AE10046CF1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A22819722B398AE10046CF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A22819742B398AE20046CF1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A22819772B398AE20046CF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A22819792B398AE20046CF1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +32,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A23C86482B3B38810029C456 /* CombineCocoa in Frameworks */,
+				A23C864B2B3B38DF0029C456 /* SnapKit in Frameworks */,
+				A23C864D2B3B38DF0029C456 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +63,6 @@
 				A228196B2B398AE10046CF1C /* AppDelegate.swift */,
 				A228196D2B398AE10046CF1C /* SceneDelegate.swift */,
 				A228196F2B398AE10046CF1C /* ViewController.swift */,
-				A22819712B398AE10046CF1C /* Main.storyboard */,
 				A22819742B398AE20046CF1C /* Assets.xcassets */,
 				A22819762B398AE20046CF1C /* LaunchScreen.storyboard */,
 				A22819792B398AE20046CF1C /* Info.plist */,
@@ -83,6 +86,11 @@
 			dependencies = (
 			);
 			name = TipBuddy;
+			packageProductDependencies = (
+				A23C86472B3B38810029C456 /* CombineCocoa */,
+				A23C864A2B3B38DF0029C456 /* SnapKit */,
+				A23C864C2B3B38DF0029C456 /* SnapKit-Dynamic */,
+			);
 			productName = TipBuddy;
 			productReference = A22819682B398AE10046CF1C /* TipBuddy.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,10 @@
 				Base,
 			);
 			mainGroup = A228195F2B398AE10046CF1C;
+			packageReferences = (
+				A23C86462B3B38810029C456 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				A23C86492B3B38DF0029C456 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = A22819692B398AE10046CF1C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +139,6 @@
 			files = (
 				A22819782B398AE20046CF1C /* LaunchScreen.storyboard in Resources */,
 				A22819752B398AE20046CF1C /* Assets.xcassets in Resources */,
-				A22819732B398AE10046CF1C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +158,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A22819712B398AE10046CF1C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A22819722B398AE10046CF1C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A22819762B398AE20046CF1C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +300,6 @@
 				INFOPLIST_FILE = TipBuddy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +327,6 @@
 				INFOPLIST_FILE = TipBuddy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,6 +364,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A23C86462B3B38810029C456 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+		A23C86492B3B38DF0029C456 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A23C86472B3B38810029C456 /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A23C86462B3B38810029C456 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+		A23C864A2B3B38DF0029C456 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A23C86492B3B38DF0029C456 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		A23C864C2B3B38DF0029C456 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A23C86492B3B38DF0029C456 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A22819602B398AE10046CF1C /* Project object */;
 }
