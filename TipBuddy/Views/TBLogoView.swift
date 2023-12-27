@@ -10,6 +10,36 @@ import SnapKit
 
 class TBLogoView: UIView {
     
+    private let imageView: UIImageView = {
+        let view = UIImageView(image: .init(named: "image"))
+        view.contentMode = .scaleAspectFit
+        return view
+    }()
+    
+    private let topLabel: UILabel = {
+        let label = UILabel()
+        let text = NSMutableAttributedString(string: "TIP", attributes: [.font: ThemeFont.bold(ofSize: 24)])
+        label.attributedText = text
+        return label
+    }()
+    
+    private let bottomLabel = TBLabel(text: "Buddy", font: ThemeFont.demibold(ofSize: 20),textAlignment: .left)
+    
+    private lazy var verticalStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [topLabel, bottomLabel])
+        stackView.axis = .vertical
+        stackView.spacing = -4
+        return stackView
+    }()
+    
+    private lazy var horizontalStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [imageView, verticalStackView])
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.spacing = 8
+        return stackView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         layout()
@@ -20,6 +50,15 @@ class TBLogoView: UIView {
     }
     
     private func layout() {
-        backgroundColor = .systemYellow
+        addSubview(horizontalStackView)
+        
+        horizontalStackView.snp.makeConstraints { make in
+            make.top.bottom.equalToSuperview()
+            make.centerX.equalToSuperview()
+        }
+        
+        imageView.snp.makeConstraints { make in
+            make.height.equalTo(imageView.snp.width)
+        }
     }
 }

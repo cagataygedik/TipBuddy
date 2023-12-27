@@ -23,6 +23,7 @@
 		A25EB4902B3C27D100359A91 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB48F2B3C27D100359A91 /* UIColor+Extension.swift */; };
 		A25EB4932B3C286600359A91 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4922B3C286600359A91 /* ThemeColor.swift */; };
 		A25EB4952B3C28A400359A91 /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4942B3C28A400359A91 /* ThemeFont.swift */; };
+		A25EB4982B3C365A00359A91 /* TBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4972B3C365A00359A91 /* TBLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		A25EB48F2B3C27D100359A91 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		A25EB4922B3C286600359A91 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		A25EB4942B3C28A400359A91 /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
+		A25EB4972B3C365A00359A91 /* TBLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		A228196A2B398AE10046CF1C /* TipBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				A25EB4962B3C363300359A91 /* CustomViews */,
 				A25EB4912B3C284F00359A91 /* Constants */,
 				A25EB48E2B3C276200359A91 /* Extension */,
 				A25EB4832B3C146D00359A91 /* Views */,
@@ -124,6 +127,14 @@
 				A25EB4942B3C28A400359A91 /* ThemeFont.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		A25EB4962B3C363300359A91 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				A25EB4972B3C365A00359A91 /* TBLabel.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 			files = (
 				A25EB4952B3C28A400359A91 /* ThemeFont.swift in Sources */,
 				A22819702B398AE10046CF1C /* TBMainViewController.swift in Sources */,
+				A25EB4982B3C365A00359A91 /* TBLabel.swift in Sources */,
 				A25EB48B2B3C16A000359A91 /* TBTipInputView.swift in Sources */,
 				A25EB4852B3C167400359A91 /* TBLogoView.swift in Sources */,
 				A25EB4902B3C27D100359A91 /* UIColor+Extension.swift in Sources */,
