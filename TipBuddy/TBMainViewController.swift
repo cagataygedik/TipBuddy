@@ -18,7 +18,7 @@ class TBMainViewController: UIViewController {
     
     private lazy var verticalStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
-            logoView, resultView, billInputView, tipInputView, splitInputView
+            logoView, resultView, billInputView, tipInputView, splitInputView, UIView()
         ])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
@@ -32,6 +32,7 @@ class TBMainViewController: UIViewController {
     }
     
     private func layout() {
+        view.backgroundColor = ThemeColor.backgrounColor
         view.addSubview(verticalStackView)
         
         verticalStackView.snp.makeConstraints { make in
