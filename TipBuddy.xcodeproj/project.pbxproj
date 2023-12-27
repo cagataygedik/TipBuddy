@@ -60,14 +60,22 @@
 		A228196A2B398AE10046CF1C /* TipBuddy */ = {
 			isa = PBXGroup;
 			children = (
-				A228196B2B398AE10046CF1C /* AppDelegate.swift */,
-				A228196D2B398AE10046CF1C /* SceneDelegate.swift */,
+				A25EB4822B3C141300359A91 /* Resources */,
 				A228196F2B398AE10046CF1C /* ViewController.swift */,
-				A22819742B398AE20046CF1C /* Assets.xcassets */,
-				A22819762B398AE20046CF1C /* LaunchScreen.storyboard */,
 				A22819792B398AE20046CF1C /* Info.plist */,
 			);
 			path = TipBuddy;
+			sourceTree = "<group>";
+		};
+		A25EB4822B3C141300359A91 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A22819762B398AE20046CF1C /* LaunchScreen.storyboard */,
+				A22819742B398AE20046CF1C /* Assets.xcassets */,
+				A228196B2B398AE10046CF1C /* AppDelegate.swift */,
+				A228196D2B398AE10046CF1C /* SceneDelegate.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
