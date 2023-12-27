@@ -9,22 +9,32 @@
 /* Begin PBXBuildFile section */
 		A228196C2B398AE10046CF1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196B2B398AE10046CF1C /* AppDelegate.swift */; };
 		A228196E2B398AE10046CF1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196D2B398AE10046CF1C /* SceneDelegate.swift */; };
-		A22819702B398AE10046CF1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196F2B398AE10046CF1C /* ViewController.swift */; };
+		A22819702B398AE10046CF1C /* TBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196F2B398AE10046CF1C /* TBMainViewController.swift */; };
 		A22819752B398AE20046CF1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A22819742B398AE20046CF1C /* Assets.xcassets */; };
 		A22819782B398AE20046CF1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22819762B398AE20046CF1C /* LaunchScreen.storyboard */; };
 		A23C86482B3B38810029C456 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A23C86472B3B38810029C456 /* CombineCocoa */; };
 		A23C864B2B3B38DF0029C456 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A23C864A2B3B38DF0029C456 /* SnapKit */; };
 		A23C864D2B3B38DF0029C456 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A23C864C2B3B38DF0029C456 /* SnapKit-Dynamic */; };
+		A25EB4852B3C167400359A91 /* TBLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4842B3C167400359A91 /* TBLogoView.swift */; };
+		A25EB4872B3C167F00359A91 /* TBResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4862B3C167F00359A91 /* TBResultView.swift */; };
+		A25EB4892B3C168E00359A91 /* TBBillInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4882B3C168E00359A91 /* TBBillInputView.swift */; };
+		A25EB48B2B3C16A000359A91 /* TBTipInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB48A2B3C16A000359A91 /* TBTipInputView.swift */; };
+		A25EB48D2B3C16AF00359A91 /* TBSplitInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB48C2B3C16AF00359A91 /* TBSplitInputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A22819682B398AE10046CF1C /* TipBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A228196B2B398AE10046CF1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A228196D2B398AE10046CF1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A228196F2B398AE10046CF1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A228196F2B398AE10046CF1C /* TBMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBMainViewController.swift; sourceTree = "<group>"; };
 		A22819742B398AE20046CF1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A22819772B398AE20046CF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A22819792B398AE20046CF1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A25EB4842B3C167400359A91 /* TBLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLogoView.swift; sourceTree = "<group>"; };
+		A25EB4862B3C167F00359A91 /* TBResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBResultView.swift; sourceTree = "<group>"; };
+		A25EB4882B3C168E00359A91 /* TBBillInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBBillInputView.swift; sourceTree = "<group>"; };
+		A25EB48A2B3C16A000359A91 /* TBTipInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBTipInputView.swift; sourceTree = "<group>"; };
+		A25EB48C2B3C16AF00359A91 /* TBSplitInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSplitInputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +70,9 @@
 		A228196A2B398AE10046CF1C /* TipBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				A25EB4832B3C146D00359A91 /* Views */,
 				A25EB4822B3C141300359A91 /* Resources */,
-				A228196F2B398AE10046CF1C /* ViewController.swift */,
+				A228196F2B398AE10046CF1C /* TBMainViewController.swift */,
 				A22819792B398AE20046CF1C /* Info.plist */,
 			);
 			path = TipBuddy;
@@ -76,6 +87,18 @@
 				A228196D2B398AE10046CF1C /* SceneDelegate.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A25EB4832B3C146D00359A91 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A25EB4842B3C167400359A91 /* TBLogoView.swift */,
+				A25EB4862B3C167F00359A91 /* TBResultView.swift */,
+				A25EB4882B3C168E00359A91 /* TBBillInputView.swift */,
+				A25EB48A2B3C16A000359A91 /* TBTipInputView.swift */,
+				A25EB48C2B3C16AF00359A91 /* TBSplitInputView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +180,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A22819702B398AE10046CF1C /* ViewController.swift in Sources */,
+				A22819702B398AE10046CF1C /* TBMainViewController.swift in Sources */,
+				A25EB48B2B3C16A000359A91 /* TBTipInputView.swift in Sources */,
+				A25EB4852B3C167400359A91 /* TBLogoView.swift in Sources */,
+				A25EB4892B3C168E00359A91 /* TBBillInputView.swift in Sources */,
 				A228196C2B398AE10046CF1C /* AppDelegate.swift in Sources */,
+				A25EB4872B3C167F00359A91 /* TBResultView.swift in Sources */,
+				A25EB48D2B3C16AF00359A91 /* TBSplitInputView.swift in Sources */,
 				A228196E2B398AE10046CF1C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
