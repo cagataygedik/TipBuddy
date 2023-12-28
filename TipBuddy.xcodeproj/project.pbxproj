@@ -13,8 +13,6 @@
 		A22819752B398AE20046CF1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A22819742B398AE20046CF1C /* Assets.xcassets */; };
 		A22819782B398AE20046CF1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22819762B398AE20046CF1C /* LaunchScreen.storyboard */; };
 		A23C86482B3B38810029C456 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A23C86472B3B38810029C456 /* CombineCocoa */; };
-		A23C864B2B3B38DF0029C456 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A23C864A2B3B38DF0029C456 /* SnapKit */; };
-		A23C864D2B3B38DF0029C456 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = A23C864C2B3B38DF0029C456 /* SnapKit-Dynamic */; };
 		A25EB4852B3C167400359A91 /* TBLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4842B3C167400359A91 /* TBLogoView.swift */; };
 		A25EB4872B3C167F00359A91 /* TBResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4862B3C167F00359A91 /* TBResultView.swift */; };
 		A25EB4892B3C168E00359A91 /* TBBillInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4882B3C168E00359A91 /* TBBillInputView.swift */; };
@@ -24,8 +22,12 @@
 		A25EB4932B3C286600359A91 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4922B3C286600359A91 /* ThemeColor.swift */; };
 		A25EB4952B3C28A400359A91 /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4942B3C28A400359A91 /* ThemeFont.swift */; };
 		A25EB4982B3C365A00359A91 /* TBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4972B3C365A00359A91 /* TBLabel.swift */; };
+		A28694222B3DBDD0006B011B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A28694212B3DBDD0006B011B /* SnapKit */; };
 		A2DA0EA22B3D7E4A00B2861F /* TBAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EA12B3D7E4900B2861F /* TBAmountView.swift */; };
 		A2DA0EA42B3D7EC700B2861F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EA32B3D7EC700B2861F /* UIView+Extension.swift */; };
+		A2DA0EA82B3D8B1500B2861F /* TBHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EA72B3D8B1500B2861F /* TBHeaderView.swift */; };
+		A2DA0EAB2B3D9E2500B2861F /* TBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EAA2B3D9E2500B2861F /* TBTextField.swift */; };
+		A2DA0EAD2B3DA00600B2861F /* TBTextFieldContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EAC2B3DA00600B2861F /* TBTextFieldContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,9 @@
 		A25EB4972B3C365A00359A91 /* TBLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLabel.swift; sourceTree = "<group>"; };
 		A2DA0EA12B3D7E4900B2861F /* TBAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBAmountView.swift; sourceTree = "<group>"; };
 		A2DA0EA32B3D7EC700B2861F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		A2DA0EA72B3D8B1500B2861F /* TBHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBHeaderView.swift; sourceTree = "<group>"; };
+		A2DA0EAA2B3D9E2500B2861F /* TBTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBTextField.swift; sourceTree = "<group>"; };
+		A2DA0EAC2B3DA00600B2861F /* TBTextFieldContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBTextFieldContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A23C86482B3B38810029C456 /* CombineCocoa in Frameworks */,
-				A23C864B2B3B38DF0029C456 /* SnapKit in Frameworks */,
-				A23C864D2B3B38DF0029C456 /* SnapKit-Dynamic in Frameworks */,
+				A28694222B3DBDD0006B011B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +86,7 @@
 		A228196A2B398AE10046CF1C /* TipBuddy */ = {
 			isa = PBXGroup;
 			children = (
-				A25EB4962B3C363300359A91 /* CustomViews */,
+				A25EB4962B3C363300359A91 /* ReusableViews */,
 				A25EB4912B3C284F00359A91 /* Constants */,
 				A25EB48E2B3C276200359A91 /* Extension */,
 				A25EB4832B3C146D00359A91 /* Views */,
@@ -134,19 +138,22 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		A25EB4962B3C363300359A91 /* CustomViews */ = {
+		A25EB4962B3C363300359A91 /* ReusableViews */ = {
 			isa = PBXGroup;
 			children = (
+				A2DA0EA92B3D9E1200B2861F /* TextField */,
 				A2DA0EA62B3D8AE300B2861F /* Label */,
 				A2DA0EA52B3D8ADC00B2861F /* View */,
 			);
-			path = CustomViews;
+			path = ReusableViews;
 			sourceTree = "<group>";
 		};
 		A2DA0EA52B3D8ADC00B2861F /* View */ = {
 			isa = PBXGroup;
 			children = (
 				A2DA0EA12B3D7E4900B2861F /* TBAmountView.swift */,
+				A2DA0EA72B3D8B1500B2861F /* TBHeaderView.swift */,
+				A2DA0EAC2B3DA00600B2861F /* TBTextFieldContainerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +164,14 @@
 				A25EB4972B3C365A00359A91 /* TBLabel.swift */,
 			);
 			path = Label;
+			sourceTree = "<group>";
+		};
+		A2DA0EA92B3D9E1200B2861F /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				A2DA0EAA2B3D9E2500B2861F /* TBTextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,8 +192,7 @@
 			name = TipBuddy;
 			packageProductDependencies = (
 				A23C86472B3B38810029C456 /* CombineCocoa */,
-				A23C864A2B3B38DF0029C456 /* SnapKit */,
-				A23C864C2B3B38DF0029C456 /* SnapKit-Dynamic */,
+				A28694212B3DBDD0006B011B /* SnapKit */,
 			);
 			productName = TipBuddy;
 			productReference = A22819682B398AE10046CF1C /* TipBuddy.app */;
@@ -210,7 +224,7 @@
 			mainGroup = A228195F2B398AE10046CF1C;
 			packageReferences = (
 				A23C86462B3B38810029C456 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
-				A23C86492B3B38DF0029C456 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				A28694202B3DBDD0006B011B /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = A22819692B398AE10046CF1C /* Products */;
 			projectDirPath = "";
@@ -240,14 +254,17 @@
 			files = (
 				A25EB4952B3C28A400359A91 /* ThemeFont.swift in Sources */,
 				A22819702B398AE10046CF1C /* TBMainViewController.swift in Sources */,
+				A2DA0EAD2B3DA00600B2861F /* TBTextFieldContainerView.swift in Sources */,
 				A25EB4982B3C365A00359A91 /* TBLabel.swift in Sources */,
 				A2DA0EA42B3D7EC700B2861F /* UIView+Extension.swift in Sources */,
 				A25EB48B2B3C16A000359A91 /* TBTipInputView.swift in Sources */,
 				A25EB4852B3C167400359A91 /* TBLogoView.swift in Sources */,
 				A25EB4902B3C27D100359A91 /* UIColor+Extension.swift in Sources */,
+				A2DA0EA82B3D8B1500B2861F /* TBHeaderView.swift in Sources */,
 				A25EB4892B3C168E00359A91 /* TBBillInputView.swift in Sources */,
 				A228196C2B398AE10046CF1C /* AppDelegate.swift in Sources */,
 				A25EB4872B3C167F00359A91 /* TBResultView.swift in Sources */,
+				A2DA0EAB2B3D9E2500B2861F /* TBTextField.swift in Sources */,
 				A2DA0EA22B3D7E4A00B2861F /* TBAmountView.swift in Sources */,
 				A25EB48D2B3C16AF00359A91 /* TBSplitInputView.swift in Sources */,
 				A228196E2B398AE10046CF1C /* SceneDelegate.swift in Sources */,
@@ -400,9 +417,8 @@
 				INFOPLIST_FILE = TipBuddy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,9 +447,8 @@
 				INFOPLIST_FILE = TipBuddy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,11 +497,11 @@
 				minimumVersion = 0.4.1;
 			};
 		};
-		A23C86492B3B38DF0029C456 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		A28694202B3DBDD0006B011B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
-				kind = upToNextMinorVersion;
+				kind = upToNextMajorVersion;
 				minimumVersion = 5.6.0;
 			};
 		};
@@ -498,15 +513,10 @@
 			package = A23C86462B3B38810029C456 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
 			productName = CombineCocoa;
 		};
-		A23C864A2B3B38DF0029C456 /* SnapKit */ = {
+		A28694212B3DBDD0006B011B /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A23C86492B3B38DF0029C456 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = A28694202B3DBDD0006B011B /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		A23C864C2B3B38DF0029C456 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A23C86492B3B38DF0029C456 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
