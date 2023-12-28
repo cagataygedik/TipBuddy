@@ -67,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A22526DD2B3E0B1400B6CAF4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A228196F2B398AE10046CF1C /* TBMainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		A228195F2B398AE10046CF1C = {
 			isa = PBXGroup;
 			children = (
@@ -86,12 +94,12 @@
 		A228196A2B398AE10046CF1C /* TipBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				A22526DD2B3E0B1400B6CAF4 /* ViewControllers */,
 				A25EB4962B3C363300359A91 /* ReusableViews */,
 				A25EB4912B3C284F00359A91 /* Constants */,
 				A25EB48E2B3C276200359A91 /* Extension */,
 				A25EB4832B3C146D00359A91 /* Views */,
 				A25EB4822B3C141300359A91 /* Resources */,
-				A228196F2B398AE10046CF1C /* TBMainViewController.swift */,
 				A22819792B398AE20046CF1C /* Info.plist */,
 			);
 			path = TipBuddy;
@@ -418,7 +426,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,7 +456,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
