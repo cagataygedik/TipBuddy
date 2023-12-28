@@ -34,8 +34,8 @@ class TBResultView: UIView {
         return stackView
     }()
     
-    private let amountViewOne = TBAmountView()
-    private let amountViewTwo = TBAmountView()
+    private let amountViewOne = TBAmountView(title: "Total Bill", textAlignment: .left, amountLabelIdentifier: "$0")
+    private let amountViewTwo = TBAmountView(title: "Total Tip", textAlignment: .right, amountLabelIdentifier: "$0")
     
     private lazy var horizontalStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [amountViewOne, UIView(), amountViewTwo])
