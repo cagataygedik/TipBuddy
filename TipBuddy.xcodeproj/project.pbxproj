@@ -107,7 +107,6 @@
 		A25EB4832B3C146D00359A91 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A2DA0EA12B3D7E4900B2861F /* TBAmountView.swift */,
 				A25EB4842B3C167400359A91 /* TBLogoView.swift */,
 				A25EB4862B3C167F00359A91 /* TBResultView.swift */,
 				A25EB4882B3C168E00359A91 /* TBBillInputView.swift */,
@@ -138,9 +137,26 @@
 		A25EB4962B3C363300359A91 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				A25EB4972B3C365A00359A91 /* TBLabel.swift */,
+				A2DA0EA62B3D8AE300B2861F /* Label */,
+				A2DA0EA52B3D8ADC00B2861F /* View */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		A2DA0EA52B3D8ADC00B2861F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2DA0EA12B3D7E4900B2861F /* TBAmountView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2DA0EA62B3D8AE300B2861F /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				A25EB4972B3C365A00359A91 /* TBLabel.swift */,
+			);
+			path = Label;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
