@@ -25,10 +25,11 @@ class TBMainViewController: UIViewController {
         stackView.spacing = 36
         return stackView
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
+        createDismissKeyboardTapGesture()
     }
     
     private func layout() {
@@ -61,6 +62,11 @@ class TBMainViewController: UIViewController {
         splitInputView.snp.makeConstraints { make in
             make.height.equalTo(56)
         }
+    }
+    
+    func createDismissKeyboardTapGesture() {
+        let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
     }
 }
 
