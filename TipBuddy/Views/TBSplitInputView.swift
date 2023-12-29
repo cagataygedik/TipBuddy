@@ -9,6 +9,18 @@ import UIKit
 import SnapKit
 
 class TBSplitInputView: UIView {
+    
+    private let headerView = TBHeaderView(topText: "Split", bottomText: "the total")
+    private let decrementButton = TBOperatorButton(text: "-", corners: [.layerMinXMaxYCorner, .layerMinXMinYCorner])
+    private let quantityLabel = TBLabel(text: "1", font: ThemeFont.bold(ofSize: 20), backgroundColor: .white)
+    private let incrementButton = TBOperatorButton(text: "+", corners: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
+    
+    private lazy var horizontalStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [decrementButton, quantityLabel, incrementButton])
+        stackView.axis = .horizontal
+        stackView.spacing = 0
+        return stackView
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -20,6 +32,26 @@ class TBSplitInputView: UIView {
     }
     
     private func layout() {
-        backgroundColor = .systemPink
+        addSubview(headerView)
+        addSubview(horizontalStackView)
+        
+        headerView.snp.makeConstraints { make in
+            make.left.equalToSuperview()
+            make.right.equalTo(horizontalStackView.snp.left).offset(-24)
+            make.centerY.equalTo(horizontalStackView.snp.centerY)
+            make.width.equalTo(68)
+        }
+        
+        horizontalStackView.snp.makeConstraints { make in
+            make.top.right.bottom.equalToSuperview()
+        }
+        
+        decrementButton.snp.makeConstraints { make in
+            make.width.equalTo(snp.height)
+        }
+        
+        incrementButton.snp.makeConstraints { make in
+            make.width.equalTo(snp.height)
+        }
     }
 }
