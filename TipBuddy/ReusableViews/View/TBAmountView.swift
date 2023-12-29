@@ -18,7 +18,7 @@ class TBAmountView: UIView {
     private lazy var amountLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = textAlignment
-        label.textColor = ThemeColor.primaryCOlor
+        label.textColor = ThemeColor.primaryColor
         let text = NSMutableAttributedString(string: "$0", attributes: [.font: ThemeFont.bold(ofSize: 24)])
         text.addAttributes([.font: ThemeFont.bold(ofSize: 16)], range: NSMakeRange(0, 1))
         label.attributedText = text

@@ -22,6 +22,8 @@
 		A25EB4932B3C286600359A91 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4922B3C286600359A91 /* ThemeColor.swift */; };
 		A25EB4952B3C28A400359A91 /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4942B3C28A400359A91 /* ThemeFont.swift */; };
 		A25EB4982B3C365A00359A91 /* TBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4972B3C365A00359A91 /* TBLabel.swift */; };
+		A27542102B3EAF2B00719E63 /* TBPercentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A275420F2B3EAF2B00719E63 /* TBPercentButton.swift */; };
+		A27542142B3EB10100719E63 /* TipEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27542132B3EB10100719E63 /* TipEnum.swift */; };
 		A28694222B3DBDD0006B011B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A28694212B3DBDD0006B011B /* SnapKit */; };
 		A2DA0EA22B3D7E4A00B2861F /* TBAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EA12B3D7E4900B2861F /* TBAmountView.swift */; };
 		A2DA0EA42B3D7EC700B2861F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EA32B3D7EC700B2861F /* UIView+Extension.swift */; };
@@ -47,6 +49,8 @@
 		A25EB4922B3C286600359A91 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		A25EB4942B3C28A400359A91 /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		A25EB4972B3C365A00359A91 /* TBLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLabel.swift; sourceTree = "<group>"; };
+		A275420F2B3EAF2B00719E63 /* TBPercentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBPercentButton.swift; sourceTree = "<group>"; };
+		A27542132B3EB10100719E63 /* TipEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipEnum.swift; sourceTree = "<group>"; };
 		A2DA0EA12B3D7E4900B2861F /* TBAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBAmountView.swift; sourceTree = "<group>"; };
 		A2DA0EA32B3D7EC700B2861F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A2DA0EA72B3D8B1500B2861F /* TBHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBHeaderView.swift; sourceTree = "<group>"; };
@@ -94,9 +98,10 @@
 		A228196A2B398AE10046CF1C /* TipBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				A27542152B3EB98800719E63 /* Models */,
 				A22526DD2B3E0B1400B6CAF4 /* ViewControllers */,
 				A25EB4962B3C363300359A91 /* ReusableViews */,
-				A25EB4912B3C284F00359A91 /* Constants */,
+				A25EB4912B3C284F00359A91 /* Utilities */,
 				A25EB48E2B3C276200359A91 /* Extension */,
 				A25EB4832B3C146D00359A91 /* Views */,
 				A25EB4822B3C141300359A91 /* Resources */,
@@ -137,7 +142,34 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		A25EB4912B3C284F00359A91 /* Constants */ = {
+		A25EB4912B3C284F00359A91 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A27542112B3EB0DE00719E63 /* Constants */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A25EB4962B3C363300359A91 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				A275420E2B3EAECE00719E63 /* Button */,
+				A2DA0EA92B3D9E1200B2861F /* TextField */,
+				A2DA0EA62B3D8AE300B2861F /* Label */,
+				A2DA0EA52B3D8ADC00B2861F /* View */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		A275420E2B3EAECE00719E63 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				A275420F2B3EAF2B00719E63 /* TBPercentButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		A27542112B3EB0DE00719E63 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				A25EB4922B3C286600359A91 /* ThemeColor.swift */,
@@ -146,14 +178,12 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		A25EB4962B3C363300359A91 /* ReusableViews */ = {
+		A27542152B3EB98800719E63 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A2DA0EA92B3D9E1200B2861F /* TextField */,
-				A2DA0EA62B3D8AE300B2861F /* Label */,
-				A2DA0EA52B3D8ADC00B2861F /* View */,
+				A27542132B3EB10100719E63 /* TipEnum.swift */,
 			);
-			path = ReusableViews;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		A2DA0EA52B3D8ADC00B2861F /* View */ = {
@@ -272,7 +302,9 @@
 				A25EB4892B3C168E00359A91 /* TBBillInputView.swift in Sources */,
 				A228196C2B398AE10046CF1C /* AppDelegate.swift in Sources */,
 				A25EB4872B3C167F00359A91 /* TBResultView.swift in Sources */,
+				A27542142B3EB10100719E63 /* TipEnum.swift in Sources */,
 				A2DA0EAB2B3D9E2500B2861F /* TBTextField.swift in Sources */,
+				A27542102B3EAF2B00719E63 /* TBPercentButton.swift in Sources */,
 				A2DA0EA22B3D7E4A00B2861F /* TBAmountView.swift in Sources */,
 				A25EB48D2B3C16AF00359A91 /* TBSplitInputView.swift in Sources */,
 				A228196E2B398AE10046CF1C /* SceneDelegate.swift in Sources */,
