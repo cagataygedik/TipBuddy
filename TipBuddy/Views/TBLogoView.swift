@@ -16,6 +16,14 @@ class TBLogoView: UIView {
         return view
     }()
     
+    private let settingsButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(systemName: "gear"), for: .normal)
+        button.addTarget(self, action: #selector(didTapSettingsButton), for: .touchUpInside)
+        button.tintColor = ThemeColor.primaryColor
+        return button
+    }()
+    
     private let topLabel: UILabel = {
         let label = UILabel()
         let text = NSMutableAttributedString(string: "TIP", attributes: [.font: ThemeFont.bold(ofSize: 24)])
@@ -49,8 +57,12 @@ class TBLogoView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    @objc private func didTapSettingsButton() {
+    }
+    
     private func layout() {
         addSubview(horizontalStackView)
+        addSubview(settingsButton)
         
         horizontalStackView.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview()
@@ -59,6 +71,11 @@ class TBLogoView: UIView {
         
         imageView.snp.makeConstraints { make in
             make.height.equalTo(imageView.snp.width)
+        }
+        
+        settingsButton.snp.makeConstraints { make in
+            make.centerY.equalTo(horizontalStackView)
+            make.trailing.equalToSuperview()
         }
     }
 }
