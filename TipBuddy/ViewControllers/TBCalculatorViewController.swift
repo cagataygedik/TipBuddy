@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class TBMainViewController: UIViewController {
+class TBCalculatorViewController: UIViewController {
     
     private let logoView = TBLogoView()
     private let resultView = TBResultView()

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A228196C2B398AE10046CF1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196B2B398AE10046CF1C /* AppDelegate.swift */; };
 		A228196E2B398AE10046CF1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196D2B398AE10046CF1C /* SceneDelegate.swift */; };
-		A22819702B398AE10046CF1C /* TBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196F2B398AE10046CF1C /* TBMainViewController.swift */; };
+		A22819702B398AE10046CF1C /* TBCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196F2B398AE10046CF1C /* TBCalculatorViewController.swift */; };
 		A22819752B398AE20046CF1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A22819742B398AE20046CF1C /* Assets.xcassets */; };
 		A22819782B398AE20046CF1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22819762B398AE20046CF1C /* LaunchScreen.storyboard */; };
 		A23C86482B3B38810029C456 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A23C86472B3B38810029C456 /* CombineCocoa */; };
@@ -37,7 +37,7 @@
 		A22819682B398AE10046CF1C /* TipBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A228196B2B398AE10046CF1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A228196D2B398AE10046CF1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A228196F2B398AE10046CF1C /* TBMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBMainViewController.swift; sourceTree = "<group>"; };
+		A228196F2B398AE10046CF1C /* TBCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBCalculatorViewController.swift; sourceTree = "<group>"; };
 		A22819742B398AE20046CF1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A22819772B398AE20046CF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A22819792B398AE20046CF1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 		A22526DD2B3E0B1400B6CAF4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A228196F2B398AE10046CF1C /* TBMainViewController.swift */,
+				A228196F2B398AE10046CF1C /* TBCalculatorViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -294,7 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A25EB4952B3C28A400359A91 /* ThemeFont.swift in Sources */,
-				A22819702B398AE10046CF1C /* TBMainViewController.swift in Sources */,
+				A22819702B398AE10046CF1C /* TBCalculatorViewController.swift in Sources */,
 				A2DA0EAD2B3DA00600B2861F /* TBTextFieldContainerView.swift in Sources */,
 				A25EB4982B3C365A00359A91 /* TBLabel.swift in Sources */,
 				A2DA0EA42B3D7EC700B2861F /* UIView+Extension.swift in Sources */,
