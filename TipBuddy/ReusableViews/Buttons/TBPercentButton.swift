@@ -8,9 +8,9 @@
 import UIKit
 
 class TBPercentButton: UIButton {
-    private let tip: TipEnum
+    private let tip: Tip
     
-    init(tip: TipEnum) {
+    init(tip: Tip) {
         self.tip = tip
         super.init(frame: .zero)
         configure()

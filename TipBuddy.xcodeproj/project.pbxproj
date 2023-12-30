@@ -12,6 +12,7 @@
 		A22819702B398AE10046CF1C /* TBCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196F2B398AE10046CF1C /* TBCalculatorViewController.swift */; };
 		A22819752B398AE20046CF1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A22819742B398AE20046CF1C /* Assets.xcassets */; };
 		A22819782B398AE20046CF1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22819762B398AE20046CF1C /* LaunchScreen.storyboard */; };
+		A23A5E752B4023AD0004B5A8 /* TBCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A5E742B4023AD0004B5A8 /* TBCalculatorViewModel.swift */; };
 		A23C86482B3B38810029C456 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A23C86472B3B38810029C456 /* CombineCocoa */; };
 		A25EB4852B3C167400359A91 /* TBLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4842B3C167400359A91 /* TBLogoView.swift */; };
 		A25EB4872B3C167F00359A91 /* TBResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4862B3C167F00359A91 /* TBResultView.swift */; };
@@ -23,7 +24,7 @@
 		A25EB4952B3C28A400359A91 /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4942B3C28A400359A91 /* ThemeFont.swift */; };
 		A25EB4982B3C365A00359A91 /* TBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4972B3C365A00359A91 /* TBLabel.swift */; };
 		A27542102B3EAF2B00719E63 /* TBPercentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A275420F2B3EAF2B00719E63 /* TBPercentButton.swift */; };
-		A27542142B3EB10100719E63 /* TipEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27542132B3EB10100719E63 /* TipEnum.swift */; };
+		A27542142B3EB10100719E63 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27542132B3EB10100719E63 /* Tip.swift */; };
 		A27542172B3EBB8900719E63 /* TBOperatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27542162B3EBB8900719E63 /* TBOperatorButton.swift */; };
 		A28694222B3DBDD0006B011B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A28694212B3DBDD0006B011B /* SnapKit */; };
 		A2DA0EA22B3D7E4A00B2861F /* TBAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EA12B3D7E4900B2861F /* TBAmountView.swift */; };
@@ -41,6 +42,7 @@
 		A22819742B398AE20046CF1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A22819772B398AE20046CF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A22819792B398AE20046CF1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A23A5E742B4023AD0004B5A8 /* TBCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBCalculatorViewModel.swift; sourceTree = "<group>"; };
 		A25EB4842B3C167400359A91 /* TBLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLogoView.swift; sourceTree = "<group>"; };
 		A25EB4862B3C167F00359A91 /* TBResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBResultView.swift; sourceTree = "<group>"; };
 		A25EB4882B3C168E00359A91 /* TBBillInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBBillInputView.swift; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		A25EB4942B3C28A400359A91 /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		A25EB4972B3C365A00359A91 /* TBLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLabel.swift; sourceTree = "<group>"; };
 		A275420F2B3EAF2B00719E63 /* TBPercentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBPercentButton.swift; sourceTree = "<group>"; };
-		A27542132B3EB10100719E63 /* TipEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipEnum.swift; sourceTree = "<group>"; };
+		A27542132B3EB10100719E63 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		A27542162B3EBB8900719E63 /* TBOperatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBOperatorButton.swift; sourceTree = "<group>"; };
 		A2DA0EA12B3D7E4900B2861F /* TBAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBAmountView.swift; sourceTree = "<group>"; };
 		A2DA0EA32B3D7EC700B2861F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		A228196A2B398AE10046CF1C /* TipBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				A23A5E732B4023990004B5A8 /* ViewModels */,
 				A27542152B3EB98800719E63 /* Models */,
 				A22526DD2B3E0B1400B6CAF4 /* ViewControllers */,
 				A25EB4962B3C363300359A91 /* ReusableViews */,
@@ -110,6 +113,14 @@
 				A22819792B398AE20046CF1C /* Info.plist */,
 			);
 			path = TipBuddy;
+			sourceTree = "<group>";
+		};
+		A23A5E732B4023990004B5A8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A23A5E742B4023AD0004B5A8 /* TBCalculatorViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		A25EB4822B3C141300359A91 /* Resources */ = {
@@ -184,7 +195,7 @@
 		A27542152B3EB98800719E63 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A27542132B3EB10100719E63 /* TipEnum.swift */,
+				A27542132B3EB10100719E63 /* Tip.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -306,7 +317,8 @@
 				A25EB4892B3C168E00359A91 /* TBBillInputView.swift in Sources */,
 				A228196C2B398AE10046CF1C /* AppDelegate.swift in Sources */,
 				A25EB4872B3C167F00359A91 /* TBResultView.swift in Sources */,
-				A27542142B3EB10100719E63 /* TipEnum.swift in Sources */,
+				A23A5E752B4023AD0004B5A8 /* TBCalculatorViewModel.swift in Sources */,
+				A27542142B3EB10100719E63 /* Tip.swift in Sources */,
 				A2DA0EAB2B3D9E2500B2861F /* TBTextField.swift in Sources */,
 				A27542102B3EAF2B00719E63 /* TBPercentButton.swift in Sources */,
 				A2DA0EA22B3D7E4A00B2861F /* TBAmountView.swift in Sources */,
