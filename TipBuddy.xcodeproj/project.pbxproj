@@ -13,6 +13,8 @@
 		A22819752B398AE20046CF1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A22819742B398AE20046CF1C /* Assets.xcassets */; };
 		A22819782B398AE20046CF1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22819762B398AE20046CF1C /* LaunchScreen.storyboard */; };
 		A23A5E752B4023AD0004B5A8 /* TBCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A5E742B4023AD0004B5A8 /* TBCalculatorViewModel.swift */; };
+		A23A5E772B4034CF0004B5A8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A5E762B4034CF0004B5A8 /* Result.swift */; };
+		A23A5E792B4046590004B5A8 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A5E782B4046590004B5A8 /* String+Extension.swift */; };
 		A23C86482B3B38810029C456 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A23C86472B3B38810029C456 /* CombineCocoa */; };
 		A25EB4852B3C167400359A91 /* TBLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4842B3C167400359A91 /* TBLogoView.swift */; };
 		A25EB4872B3C167F00359A91 /* TBResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4862B3C167F00359A91 /* TBResultView.swift */; };
@@ -43,6 +45,8 @@
 		A22819772B398AE20046CF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A22819792B398AE20046CF1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A23A5E742B4023AD0004B5A8 /* TBCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBCalculatorViewModel.swift; sourceTree = "<group>"; };
+		A23A5E762B4034CF0004B5A8 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		A23A5E782B4046590004B5A8 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A25EB4842B3C167400359A91 /* TBLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLogoView.swift; sourceTree = "<group>"; };
 		A25EB4862B3C167F00359A91 /* TBResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBResultView.swift; sourceTree = "<group>"; };
 		A25EB4882B3C168E00359A91 /* TBBillInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBBillInputView.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 			children = (
 				A25EB48F2B3C27D100359A91 /* UIColor+Extension.swift */,
 				A2DA0EA32B3D7EC700B2861F /* UIView+Extension.swift */,
+				A23A5E782B4046590004B5A8 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				A27542132B3EB10100719E63 /* Tip.swift */,
+				A23A5E762B4034CF0004B5A8 /* Result.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -314,7 +320,9 @@
 				A27542172B3EBB8900719E63 /* TBOperatorButton.swift in Sources */,
 				A25EB4902B3C27D100359A91 /* UIColor+Extension.swift in Sources */,
 				A2DA0EA82B3D8B1500B2861F /* TBHeaderView.swift in Sources */,
+				A23A5E772B4034CF0004B5A8 /* Result.swift in Sources */,
 				A25EB4892B3C168E00359A91 /* TBBillInputView.swift in Sources */,
+				A23A5E792B4046590004B5A8 /* String+Extension.swift in Sources */,
 				A228196C2B398AE10046CF1C /* AppDelegate.swift in Sources */,
 				A25EB4872B3C167F00359A91 /* TBResultView.swift in Sources */,
 				A23A5E752B4023AD0004B5A8 /* TBCalculatorViewModel.swift in Sources */,
@@ -474,6 +482,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -487,7 +496,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -504,6 +513,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -517,7 +527,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

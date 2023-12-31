@@ -7,6 +7,8 @@
 
 import UIKit
 import SnapKit
+import Combine
+import CombineCocoa
 
 class TBBillInputView: UIView {
     
@@ -15,10 +17,24 @@ class TBBillInputView: UIView {
     private let currencyLabel = TBLabel(text: "$", font: ThemeFont.bold(ofSize: 24))
     private let textField = TBTextField()
     
+    private var cancellables = Set<AnyCancellable>()
+    private let billSubject: PassthroughSubject<Double, Never> = .init()
+    var valuePublisher: AnyPublisher<Double, Never> {
+        return billSubject.eraseToAnyPublisher()
+    }
+
     init() {
         super.init(frame: .zero)
         layout()
         currencyLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        observe()
+    }
+    
+    private func observe() {
+        textField.textPublisher.sink { [unowned self] text in
+            billSubject.send(text?.doubleValue ?? 0)
+            print("\(text)")
+        }.store(in: &cancellables)
     }
     
     required init?(coder: NSCoder) {

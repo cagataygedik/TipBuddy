@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Combine
 
 class TBCalculatorViewController: UIViewController {
     
@@ -15,6 +16,9 @@ class TBCalculatorViewController: UIViewController {
     private let billInputView = TBBillInputView()
     private let tipInputView = TBTipInputView()
     private let splitInputView = TBSplitInputView()
+    
+    private let viewModel = TBCalculatorViewModel()
+    private var cancellables = Set<AnyCancellable>()
     
     private lazy var verticalStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
@@ -26,10 +30,19 @@ class TBCalculatorViewController: UIViewController {
         return stackView
     }()
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
         createDismissKeyboardTapGesture()
+        bind()
+    }
+    
+    private func bind() {
+        let input = TBCalculatorViewModel.Input(billPublisher: billInputView.valuePublisher, tipPublisher: Just(.tenPercent).eraseToAnyPublisher(), splitPublisher: Just(5).eraseToAnyPublisher())
+        
+        let output = viewModel.transform(input: input)
     }
     
     private func layout() {
