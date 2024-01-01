@@ -24,8 +24,8 @@ class TBTextField: UITextField {
         keyboardType = .decimalPad
         clearButtonMode = .whileEditing
         setContentHuggingPriority(.defaultLow, for: .horizontal)
-        tintColor = ThemeColor.textColor
-        textColor = ThemeColor.textColor
+        tintColor = UIColor.black
+        textColor = UIColor.black
         let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: 36))
         toolBar.barStyle = .default
         toolBar.sizeToFit()

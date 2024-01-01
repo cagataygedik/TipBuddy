@@ -50,7 +50,7 @@ class TBCalculatorViewController: UIViewController {
     }
     
     private func layout() {
-        view.backgroundColor = ThemeColor.backgrounColor
+        view.backgroundColor = ThemeColor.backgroundColor
         view.addSubview(verticalStackView)
         
         verticalStackView.snp.makeConstraints { make in

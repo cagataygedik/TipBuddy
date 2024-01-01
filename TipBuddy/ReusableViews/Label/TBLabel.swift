@@ -13,7 +13,7 @@ class TBLabel: UILabel {
         text: String?,
         font: UIFont,
         backgroundColor: UIColor = .clear,
-        textColor: UIColor = ThemeColor.textColor,
+        textColor: UIColor = ThemeColor.textColor!,
         textAlignment: NSTextAlignment = .center
     ) {
         self.init(frame: .zero)

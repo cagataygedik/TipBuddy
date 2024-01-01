@@ -13,6 +13,7 @@ class TBLogoView: UIView {
     private let imageView: UIImageView = {
         let view = UIImageView(image: .init(named: "image"))
         view.contentMode = .scaleAspectFit
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     

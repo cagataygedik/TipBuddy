@@ -14,7 +14,7 @@ class TBSplitInputView: UIView {
     
     private let headerView = TBHeaderView(topText: "Split", bottomText: "the total")
     private let decrementButton = TBOperatorButton(text: "-", corners: [.layerMinXMaxYCorner, .layerMinXMinYCorner])
-    private let quantityLabel = TBLabel(text: "1", font: ThemeFont.bold(ofSize: 20), backgroundColor: .white)
+    private let quantityLabel = TBLabel(text: "1", font: ThemeFont.bold(ofSize: 20), backgroundColor: .white, textColor: UIColor.black)
     private let incrementButton = TBOperatorButton(text: "+", corners: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
     
     private lazy var horizontalStackView: UIStackView = {

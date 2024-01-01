@@ -10,13 +10,13 @@ import SnapKit
 
 class TBResultView: UIView {
     
-    private let headerLabel = TBLabel(text: "Total p/person", font: ThemeFont.demibold(ofSize: 18))
+    private let headerLabel = TBLabel(text: "Total p/person", font: ThemeFont.demibold(ofSize: 18), textColor: .black)
     
     private let amountPerPersonLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        let text = NSMutableAttributedString(string: "$0", attributes: [.font: ThemeFont.bold(ofSize: 48)])
-        text.addAttributes([.font: ThemeFont.bold(ofSize: 24)], range: NSMakeRange(0, 1))
+        let text = NSMutableAttributedString(string: "$0", attributes: [.font: ThemeFont.bold(ofSize: 48), .foregroundColor: UIColor.black])
+        text.addAttributes([.font: ThemeFont.bold(ofSize: 24), .foregroundColor: UIColor.black], range: NSMakeRange(0, 1))
         label.attributedText = text
         return label
     }()

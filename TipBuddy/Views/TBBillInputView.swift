@@ -14,7 +14,7 @@ class TBBillInputView: UIView {
     
     private let headerView = TBHeaderView(topText: "Enter", bottomText: "your bill")
     private let textFieldContainerView = TBTextFieldContainerView()
-    private let currencyLabel = TBLabel(text: "$", font: ThemeFont.bold(ofSize: 24))
+    private let currencyLabel = TBLabel(text: "$", font: ThemeFont.bold(ofSize: 24), textColor: .black)
     private let textField = TBTextField()
     
     private var cancellables = Set<AnyCancellable>()

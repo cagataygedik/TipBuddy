@@ -13,7 +13,7 @@ class TBAmountView: UIView {
     private let textAlignment: NSTextAlignment
     private let amountLabelIdentifier: String
     
-    private lazy var titleLabel = TBLabel(text: title, font: ThemeFont.regular(ofSize: 18), textColor: ThemeColor.textColor, textAlignment: textAlignment)
+    private lazy var titleLabel = TBLabel(text: title, font: ThemeFont.regular(ofSize: 18), textColor: UIColor.black, textAlignment: textAlignment)
     
     private lazy var amountLabel: UILabel = {
         let label = UILabel()
