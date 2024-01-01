@@ -25,6 +25,7 @@
 		A25EB4932B3C286600359A91 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4922B3C286600359A91 /* ThemeColor.swift */; };
 		A25EB4952B3C28A400359A91 /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4942B3C28A400359A91 /* ThemeFont.swift */; };
 		A25EB4982B3C365A00359A91 /* TBLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25EB4972B3C365A00359A91 /* TBLabel.swift */; };
+		A265E6A82B4310DC00D0D49F /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A265E6A72B4310DC00D0D49F /* UIResponder+Extension.swift */; };
 		A27542102B3EAF2B00719E63 /* TBPercentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A275420F2B3EAF2B00719E63 /* TBPercentButton.swift */; };
 		A27542142B3EB10100719E63 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27542132B3EB10100719E63 /* Tip.swift */; };
 		A27542172B3EBB8900719E63 /* TBOperatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27542162B3EBB8900719E63 /* TBOperatorButton.swift */; };
@@ -56,6 +57,7 @@
 		A25EB4922B3C286600359A91 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		A25EB4942B3C28A400359A91 /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		A25EB4972B3C365A00359A91 /* TBLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLabel.swift; sourceTree = "<group>"; };
+		A265E6A72B4310DC00D0D49F /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
 		A275420F2B3EAF2B00719E63 /* TBPercentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBPercentButton.swift; sourceTree = "<group>"; };
 		A27542132B3EB10100719E63 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		A27542162B3EBB8900719E63 /* TBOperatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBOperatorButton.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				A25EB48F2B3C27D100359A91 /* UIColor+Extension.swift */,
 				A2DA0EA32B3D7EC700B2861F /* UIView+Extension.swift */,
 				A23A5E782B4046590004B5A8 /* String+Extension.swift */,
+				A265E6A72B4310DC00D0D49F /* UIResponder+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				A22819702B398AE10046CF1C /* TBCalculatorViewController.swift in Sources */,
 				A2DA0EAD2B3DA00600B2861F /* TBTextFieldContainerView.swift in Sources */,
 				A25EB4982B3C365A00359A91 /* TBLabel.swift in Sources */,
+				A265E6A82B4310DC00D0D49F /* UIResponder+Extension.swift in Sources */,
 				A2DA0EA42B3D7EC700B2861F /* UIView+Extension.swift in Sources */,
 				A25EB48B2B3C16A000359A91 /* TBTipInputView.swift in Sources */,
 				A25EB4852B3C167400359A91 /* TBLogoView.swift in Sources */,

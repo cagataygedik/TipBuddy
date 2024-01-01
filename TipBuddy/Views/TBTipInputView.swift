@@ -24,6 +24,9 @@ class TBTipInputView: UIView {
         button.backgroundColor = ThemeColor.primaryColor
         button.tintColor = .white
         button.layer.cornerRadius = 8
+        button.tapPublisher.sink { [weak self] _ in
+            self?.handleCustomTipButton()
+        }.store(in: &cancellables)
         return button
     }()
     
@@ -65,7 +68,27 @@ class TBTipInputView: UIView {
         }).assign(to: \.value, on: tipSubject)
             .store(in: &cancellables)
     }
-
+    
+    private func handleCustomTipButton() {
+        let alertController: UIAlertController = {
+            let controller = UIAlertController(title: "Enter your tip", message: nil, preferredStyle: .alert)
+            controller.addTextField { textField in
+                textField.placeholder = "Excite the waiter!"
+                textField.keyboardType = .numberPad
+                textField.autocorrectionType = .no
+                textField.clearButtonMode = .whileEditing
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+            let doneAction = UIAlertAction(title: "Done", style: .default) { [weak self] _ in
+                guard let text = controller.textFields?.first?.text, let value = Int(text) else {return}
+                self?.tipSubject.send(.customTip(value: value))
+            }
+            [doneAction, cancelAction].forEach(controller.addAction(_:))
+            return controller
+        }()
+        parentViewController?.present(alertController, animated: true)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         layout()
