@@ -89,11 +89,40 @@ class TBTipInputView: UIView {
         parentViewController?.present(alertController, animated: true)
     }
     
+    private func observe() {
+        tipSubject.sink { [unowned self] tip in
+            resetView()
+            switch tip {
+            case .none:
+                break
+            case .tenPercent:
+                tenPercentButton.backgroundColor = ThemeColor.secondaryColor
+            case .fifteenPercent:
+                fifteenPercentButton.backgroundColor = ThemeColor.secondaryColor
+            case .twentyPercent:
+                twentyPercentButton.backgroundColor = ThemeColor.secondaryColor
+            case .customTip(let value):
+                customTipButton.backgroundColor = ThemeColor.secondaryColor
+                let text = NSMutableAttributedString(string: "$\(value)", attributes: [.font: ThemeFont.bold(ofSize: 20)])
+                text.addAttributes([.font: ThemeFont.bold(ofSize: 14)], range: NSMakeRange(0, 1))
+                customTipButton.setAttributedTitle(text, for: .normal)
+            }
+        }.store(in: &cancellables)
+    }
+    
+    private func resetView() {
+        [tenPercentButton, fifteenPercentButton, twentyPercentButton, customTipButton].forEach {
+            $0.backgroundColor = ThemeColor.primaryColor
+        }
+        let text = NSMutableAttributedString(string: "Custom Tip", attributes: [.font: ThemeFont.bold(ofSize: 20)])
+        customTipButton.setAttributedTitle(text, for: .normal)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         layout()
         configureButtons()
-        print("tip: \(tipSubject.value)")
+        observe()
     }
     
     required init?(coder: NSCoder) {
