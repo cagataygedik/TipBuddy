@@ -40,7 +40,10 @@ class TBCalculatorViewController: UIViewController {
     }
     
     private func bind() {
-        let input = TBCalculatorViewModel.Input(billPublisher: billInputView.valuePublisher, tipPublisher: Just(.tenPercent).eraseToAnyPublisher(), splitPublisher: Just(5).eraseToAnyPublisher())
+        let input = TBCalculatorViewModel.Input(
+            billPublisher: billInputView.valuePublisher,
+            tipPublisher: tipInputView.valuePublisher,
+            splitPublisher: Just(5).eraseToAnyPublisher())
         
         let output = viewModel.transform(input: input)
     }

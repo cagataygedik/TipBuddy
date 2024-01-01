@@ -7,6 +7,8 @@
 
 import UIKit
 import SnapKit
+import Combine
+import CombineCocoa
 
 class TBTipInputView: UIView {
     
@@ -40,10 +42,35 @@ class TBTipInputView: UIView {
         stackView.distribution = .fillEqually
         return stackView
     }()
+    
+    private let tipSubject = CurrentValueSubject<Tip, Never>(.none)
+    public var valuePublisher: AnyPublisher<Tip, Never> {
+        return tipSubject.eraseToAnyPublisher()
+    }
+    private var cancellables = Set<AnyCancellable>()
+    
+    private func configureButtons() {
+        tenPercentButton.tapPublisher.flatMap({
+            Just(Tip.tenPercent)
+        }).assign(to: \.value, on: tipSubject)
+            .store(in: &cancellables)
+        
+        fifteenPercentButton.tapPublisher.flatMap({
+            Just(Tip.fifteenPercent)
+        }).assign(to: \.value, on: tipSubject)
+            .store(in: &cancellables)
+        
+        twentyPercentButton.tapPublisher.flatMap({
+            Just(Tip.twentyPercent)
+        }).assign(to: \.value, on: tipSubject)
+            .store(in: &cancellables)
+    }
 
     override init(frame: CGRect) {
         super.init(frame: .zero)
         layout()
+        configureButtons()
+        print("tip: \(tipSubject.value)")
     }
     
     required init?(coder: NSCoder) {
