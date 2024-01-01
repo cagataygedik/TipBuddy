@@ -30,8 +30,6 @@ class TBCalculatorViewController: UIViewController {
         return stackView
     }()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         layout()
@@ -46,6 +44,9 @@ class TBCalculatorViewController: UIViewController {
             splitPublisher: splitInputView.valuePublisher)
         
         let output = viewModel.transform(input: input)
+        output.updateViewPublisher.sink { result in
+            print(result)
+        }.store(in: &cancellables)
     }
     
     private func layout() {
