@@ -23,8 +23,8 @@ class TBCalculatorViewModel {
     private var cancellables = Set<AnyCancellable>()
     
     public func transform(input: Input) -> Output {
-        input.tipPublisher.sink { tip in
-            print("tip: \(tip)")
+        input.splitPublisher.sink { split in
+            print("split: \(split)")
         }.store(in: &cancellables)
         
         let result = Result(amountPerPerson: 500.0, totalBill: 1000, totalTip: 50.0)

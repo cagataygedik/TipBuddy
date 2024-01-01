@@ -35,6 +35,7 @@
 		A2DA0EA82B3D8B1500B2861F /* TBHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EA72B3D8B1500B2861F /* TBHeaderView.swift */; };
 		A2DA0EAB2B3D9E2500B2861F /* TBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EAA2B3D9E2500B2861F /* TBTextField.swift */; };
 		A2DA0EAD2B3DA00600B2861F /* TBTextFieldContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EAC2B3DA00600B2861F /* TBTextFieldContainerView.swift */; };
+		A2E6E6182B4327B7009F4468 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E6E6172B4327B7009F4468 /* Int+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		A2DA0EA72B3D8B1500B2861F /* TBHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBHeaderView.swift; sourceTree = "<group>"; };
 		A2DA0EAA2B3D9E2500B2861F /* TBTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBTextField.swift; sourceTree = "<group>"; };
 		A2DA0EAC2B3DA00600B2861F /* TBTextFieldContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBTextFieldContainerView.swift; sourceTree = "<group>"; };
+		A2E6E6172B4327B7009F4468 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 				A2DA0EA32B3D7EC700B2861F /* UIView+Extension.swift */,
 				A23A5E782B4046590004B5A8 /* String+Extension.swift */,
 				A265E6A72B4310DC00D0D49F /* UIResponder+Extension.swift */,
+				A2E6E6172B4327B7009F4468 /* Int+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				A25EB48D2B3C16AF00359A91 /* TBSplitInputView.swift in Sources */,
 				A228196E2B398AE10046CF1C /* SceneDelegate.swift in Sources */,
 				A25EB4932B3C286600359A91 /* ThemeColor.swift in Sources */,
+				A2E6E6182B4327B7009F4468 /* Int+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

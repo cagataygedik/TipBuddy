@@ -7,6 +7,8 @@
 
 import UIKit
 import SnapKit
+import Combine
+import CombineCocoa
 
 class TBSplitInputView: UIView {
     
@@ -21,10 +23,34 @@ class TBSplitInputView: UIView {
         stackView.spacing = 0
         return stackView
     }()
+    
+    private let splitSubject = CurrentValueSubject<Int, Never>.init(1)
+    public var valuePublisher: AnyPublisher<Int, Never> {
+        return splitSubject.removeDuplicates().eraseToAnyPublisher()
+    }
+    private var cancellables = Set<AnyCancellable>()
+    
+    private func configureButtons() {
+        decrementButton.tapPublisher.flatMap { [unowned self] _ in
+            Just(splitSubject.value == 1 ? 1 : splitSubject.value - 1)
+        }.assign(to: \.value, on: splitSubject).store(in: &cancellables)
+        
+        incrementButton.tapPublisher.flatMap { [unowned self] _ in
+            Just(splitSubject.value + 1)
+        }.assign(to: \.value, on: splitSubject).store(in: &cancellables)
+    }
+    
+    private func observe() {
+        splitSubject.sink { [unowned self] quantity in
+            quantityLabel.text = quantity.stringValue
+        }.store(in: &cancellables)
+    }
 
     override init(frame: CGRect) {
         super.init(frame: .zero)
         layout()
+        configureButtons()
+        observe()
     }
     
     required init?(coder: NSCoder) {
