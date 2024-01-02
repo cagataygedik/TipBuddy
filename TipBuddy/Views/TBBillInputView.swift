@@ -14,7 +14,7 @@ class TBBillInputView: UIView {
     
     private let headerView = TBHeaderView(topText: "Enter", bottomText: "your bill")
     private let textFieldContainerView = TBTextFieldContainerView()
-    private let currencyLabel = TBLabel(text: "$", font: ThemeFont.bold(ofSize: 24), textColor: .black)
+    private let currencyLabel = TBLabel(text: 0.currencySymbol, font: ThemeFont.bold(ofSize: 24), textColor: .black)
     private let textField = TBTextField()
     
     private var cancellables = Set<AnyCancellable>()
@@ -33,7 +33,6 @@ class TBBillInputView: UIView {
     private func observe() {
         textField.textPublisher.sink { [unowned self] text in
             billSubject.send(text?.doubleValue ?? 0)
-            print("\(text)")
         }.store(in: &cancellables)
     }
     

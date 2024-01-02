@@ -54,8 +54,8 @@ class TBResultView: UIView {
     }
     
     func configure(result: Result) {
-        let text = NSMutableAttributedString(string: result.amountPerPerson.currencyFormatted, attributes: [.font: ThemeFont.bold(ofSize: 48)])
-        text.addAttributes([.font: ThemeFont.bold(ofSize: 24)], range: NSMakeRange(0, 1))
+        let text = NSMutableAttributedString(string: result.amountPerPerson.currencyFormatted, attributes: [.font: ThemeFont.bold(ofSize: 48), .foregroundColor: UIColor.black])
+        text.addAttributes([.font: ThemeFont.bold(ofSize: 24), .foregroundColor: UIColor.black], range: NSMakeRange(0, 1))
         amountPerPersonLabel.attributedText = text
         totalBillView.configure(amount: result.totalBill)
         totalTipView.configure(amount: result.totalTip)

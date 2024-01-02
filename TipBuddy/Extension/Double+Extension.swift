@@ -17,4 +17,11 @@ extension Double {
         formatter.minimumFractionDigits = isWholeNumber ? 0 : 2
         return formatter.string(for: self) ?? ""
     }
+    
+    var currencySymbol: String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencySymbol = formatter.currencySymbol ?? ""
+        return formatter.currencySymbol ?? ""
+    }
 }
