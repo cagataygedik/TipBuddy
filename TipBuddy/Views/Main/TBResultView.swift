@@ -45,7 +45,7 @@ class TBResultView: UIView {
         stackView.distribution = .fillEqually
         return stackView
     }()
-
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         layout()
@@ -69,10 +69,14 @@ class TBResultView: UIView {
         addSubview(verticalStackView)
         
         verticalStackView.snp.makeConstraints { make in
-            make.top.equalTo(snp.top).offset(24)
-            make.left.equalTo(snp.left).offset(24)
-            make.right.equalTo(snp.right).offset(-24)
-            make.bottom.equalTo(snp.bottom).offset(-24)
+//            make.top.equalTo(snp.top).offset(24)
+//            make.left.equalTo(snp.left).offset(24)
+//            make.right.equalTo(snp.right).offset(-24)
+//            make.bottom.equalTo(snp.bottom).offset(-24)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.width.equalTo(300)
+            make.height.equalTo(180) // 180 ?? 200
         }
         
         horizontalLineView.snp.makeConstraints { make in
