@@ -37,7 +37,7 @@ class TBLogoView: UIView {
         let stackView = UIStackView(arrangedSubviews: [imageView, verticalStackView])
         stackView.axis = .horizontal
         stackView.alignment = .center
-        stackView.spacing = 8
+        stackView.spacing = -4
         return stackView
     }()
     
