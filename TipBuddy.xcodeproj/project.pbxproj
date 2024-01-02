@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A21E525F2B44073800B52CBA /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21E525E2B44073800B52CBA /* Double+Extension.swift */; };
 		A228196C2B398AE10046CF1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196B2B398AE10046CF1C /* AppDelegate.swift */; };
 		A228196E2B398AE10046CF1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196D2B398AE10046CF1C /* SceneDelegate.swift */; };
 		A22819702B398AE10046CF1C /* TBCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196F2B398AE10046CF1C /* TBCalculatorViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A21E525E2B44073800B52CBA /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		A22819682B398AE10046CF1C /* TipBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A228196B2B398AE10046CF1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A228196D2B398AE10046CF1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				A23A5E782B4046590004B5A8 /* String+Extension.swift */,
 				A265E6A72B4310DC00D0D49F /* UIResponder+Extension.swift */,
 				A2E6E6172B4327B7009F4468 /* Int+Extension.swift */,
+				A21E525E2B44073800B52CBA /* Double+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				A22819702B398AE10046CF1C /* TBCalculatorViewController.swift in Sources */,
 				A2DA0EAD2B3DA00600B2861F /* TBTextFieldContainerView.swift in Sources */,
 				A25EB4982B3C365A00359A91 /* TBLabel.swift in Sources */,
+				A21E525F2B44073800B52CBA /* Double+Extension.swift in Sources */,
 				A265E6A82B4310DC00D0D49F /* UIResponder+Extension.swift in Sources */,
 				A2DA0EA42B3D7EC700B2861F /* UIView+Extension.swift in Sources */,
 				A25EB48B2B3C16A000359A91 /* TBTipInputView.swift in Sources */,

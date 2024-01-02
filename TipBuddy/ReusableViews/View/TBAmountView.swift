@@ -44,6 +44,12 @@ class TBAmountView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configure(amount: Double) {
+        let text = NSMutableAttributedString(string: amount.currencyFormatted, attributes: [.font: ThemeFont.bold(ofSize: 24)])
+        text.addAttributes([.font: ThemeFont.bold(ofSize: 16)], range: NSMakeRange(0, 1))
+        amountLabel.attributedText = text
+    }
+    
     private func layout() {
         addSubview(verticalStackView)
         

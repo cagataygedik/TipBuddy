@@ -34,11 +34,11 @@ class TBResultView: UIView {
         return stackView
     }()
     
-    private let amountViewOne = TBAmountView(title: "Total Bill", textAlignment: .left, amountLabelIdentifier: "$0")
-    private let amountViewTwo = TBAmountView(title: "Total Tip", textAlignment: .right, amountLabelIdentifier: "$0")
+    private let totalBillView = TBAmountView(title: "Total Bill", textAlignment: .left, amountLabelIdentifier: "$0")
+    private let totalTipView = TBAmountView(title: "Total Tip", textAlignment: .right, amountLabelIdentifier: "$0")
     
     private lazy var horizontalStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [amountViewOne, UIView(), amountViewTwo])
+        let stackView = UIStackView(arrangedSubviews: [totalBillView, UIView(), totalTipView])
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         return stackView
@@ -51,6 +51,14 @@ class TBResultView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configure(result: Result) {
+        let text = NSMutableAttributedString(string: result.amountPerPerson.currencyFormatted, attributes: [.font: ThemeFont.bold(ofSize: 48)])
+        text.addAttributes([.font: ThemeFont.bold(ofSize: 24)], range: NSMakeRange(0, 1))
+        amountPerPersonLabel.attributedText = text
+        totalBillView.configure(amount: result.totalBill)
+        totalTipView.configure(amount: result.totalTip)
     }
     
     private func layout() {
