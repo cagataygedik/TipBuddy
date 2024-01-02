@@ -19,6 +19,7 @@ class TBTipInputView: UIView {
     
     private lazy var customTipButton: UIButton = {
         let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Custom Tip", for: .normal)
         button.titleLabel?.font = ThemeFont.bold(ofSize: 20)
         button.backgroundColor = ThemeColor.primaryColor
@@ -32,6 +33,7 @@ class TBTipInputView: UIView {
     
     private lazy var horizontalStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [tenPercentButton, fifteenPercentButton, twentyPercentButton])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fillEqually
         stackView.spacing = 16
         stackView.axis = .horizontal
@@ -40,6 +42,7 @@ class TBTipInputView: UIView {
     
     private lazy var verticalStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [horizontalStackView, customTipButton])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 16
         stackView.distribution = .fillEqually
@@ -124,6 +127,7 @@ class TBTipInputView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
+        translatesAutoresizingMaskIntoConstraints = false
         layout()
         configureButtons()
         observe()
@@ -136,6 +140,10 @@ class TBTipInputView: UIView {
     private func layout() {
         addSubview(headerView)
         addSubview(verticalStackView)
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        tenPercentButton.translatesAutoresizingMaskIntoConstraints = false
+        fifteenPercentButton.translatesAutoresizingMaskIntoConstraints = false
+        twentyPercentButton.translatesAutoresizingMaskIntoConstraints = false
         
         headerView.snp.makeConstraints { make in
             make.left.equalToSuperview()

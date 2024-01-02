@@ -25,6 +25,7 @@ class TBBillInputView: UIView {
 
     init() {
         super.init(frame: .zero)
+        translatesAutoresizingMaskIntoConstraints = false
         layout()
         currencyLabel.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         observe()
@@ -48,6 +49,10 @@ class TBBillInputView: UIView {
     private func layout() {
         addSubview(headerView)
         addSubview(textFieldContainerView)
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        textFieldContainerView.translatesAutoresizingMaskIntoConstraints = false
+        currencyLabel.translatesAutoresizingMaskIntoConstraints = false
+        textField.translatesAutoresizingMaskIntoConstraints = false
         
         headerView.snp.makeConstraints { make in
             make.left.equalToSuperview()

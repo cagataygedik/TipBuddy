@@ -12,7 +12,7 @@ import SwiftUI
 
 class TBCalculatorViewController: UIViewController {
     
-    private let logoView = TBLogoView()
+    //private let logoView = TBLogoView()
     private let resultView = TBResultView()
     private let billInputView = TBBillInputView()
     private let tipInputView = TBTipInputView()
@@ -23,14 +23,14 @@ class TBCalculatorViewController: UIViewController {
     
     private lazy var verticalStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [
-            logoView, resultView, billInputView, tipInputView, splitInputView, UIView()
+            resultView, billInputView, tipInputView, splitInputView, UIView()
         ])
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 36
         return stackView
     }()
-
+    
     private func addSettingsButton() {
         let settingsButton = UIBarButtonItem(title: nil, image: UIImage(systemName: "gear"), target: self, action: #selector(didTapSettingsButton))
         navigationItem.rightBarButtonItem = settingsButton
@@ -43,12 +43,19 @@ class TBCalculatorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBarTitle()
         addResetButton()
         navigationController?.navigationBar.tintColor = ThemeColor.primaryColor
         layout()
         createDismissKeyboardTapGesture()
         bind()
         addSettingsButton()
+    }
+    
+    private func setupNavigationBarTitle() {
+        let imageView = UIImageView(image: UIImage(named: "image"))
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
     }
     
     private func bind() {
@@ -74,9 +81,11 @@ class TBCalculatorViewController: UIViewController {
             make.bottom.equalTo(view.snp.bottomMargin).offset(-16)
         }
         
-        logoView.snp.makeConstraints { make in
-            make.height.equalTo(48)
-        }
+        /*
+         logoView.snp.makeConstraints { make in
+         make.height.equalTo(48)
+         }
+         */
         
         resultView.snp.makeConstraints { make in
             make.height.equalTo(224)
@@ -100,7 +109,7 @@ class TBCalculatorViewController: UIViewController {
         tipInputView.reset()
         splitInputView.reset()
     }
-
+    
     @objc private func didTapSettingsButton() {
         let settingsViewController = TBSettingsViewController()
         navigationController?.pushViewController(settingsViewController, animated: true)

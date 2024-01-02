@@ -19,6 +19,7 @@ class TBLogoView: UIView {
     
     private let topLabel: UILabel = {
         let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
         let text = NSMutableAttributedString(string: "TIP", attributes: [.font: ThemeFont.bold(ofSize: 24)])
         label.attributedText = text
         return label
@@ -28,6 +29,7 @@ class TBLogoView: UIView {
     
     private lazy var verticalStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [topLabel, bottomLabel])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = -4
         return stackView
@@ -35,6 +37,7 @@ class TBLogoView: UIView {
     
     private lazy var horizontalStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [imageView, verticalStackView])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.alignment = .center
         stackView.spacing = -4
@@ -43,6 +46,7 @@ class TBLogoView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
+        translatesAutoresizingMaskIntoConstraints = false
         layout()
     }
     

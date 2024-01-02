@@ -25,12 +25,14 @@ class TBResultView: UIView {
     
     private let horizontalLineView: UIView = {
         let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = ThemeColor.separatorColor
         return view
     }()
     
     private lazy var verticalStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [headerLabel, amountPerPersonLabel, horizontalLineView, horizontalStackView])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 10
         return stackView
@@ -38,6 +40,7 @@ class TBResultView: UIView {
     
     private lazy var horizontalStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [totalBillView, UIView(), totalTipView])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         return stackView
@@ -61,6 +64,7 @@ class TBResultView: UIView {
     }
     
     private func layout() {
+        translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .white
         addSubview(verticalStackView)
         

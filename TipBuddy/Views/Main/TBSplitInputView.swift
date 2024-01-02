@@ -19,6 +19,7 @@ class TBSplitInputView: UIView {
     
     private lazy var horizontalStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [decrementButton, quantityLabel, incrementButton])
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .horizontal
         stackView.spacing = 0
         return stackView
@@ -64,6 +65,9 @@ class TBSplitInputView: UIView {
     private func layout() {
         addSubview(headerView)
         addSubview(horizontalStackView)
+        headerView.translatesAutoresizingMaskIntoConstraints = false
+        decrementButton.translatesAutoresizingMaskIntoConstraints = false
+        incrementButton.translatesAutoresizingMaskIntoConstraints = false
         
         headerView.snp.makeConstraints { make in
             make.left.equalToSuperview()
