@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import Combine
+import SwiftUI
 
 class TBCalculatorViewController: UIViewController {
     
@@ -30,11 +31,28 @@ class TBCalculatorViewController: UIViewController {
         return stackView
     }()
     
+    /*
+     private lazy var settingsButton: UIButton = {
+     let button = UIButton(type: .system)
+     button.setImage(UIImage(systemName: "gear"), for: .normal)
+     button.addTarget(self, action: #selector(didTapSettingsButton), for: .touchUpInside)
+     button.tintColor = ThemeColor.primaryColor
+     return button
+     }()
+     */
+    
+    private func addSettingsButton() {
+        let settingsButton = UIBarButtonItem(title: nil, image: UIImage(systemName: "gear"), target: self, action: #selector(didTapSettingsButton))
+        navigationItem.rightBarButtonItem = settingsButton
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = ThemeColor.primaryColor
         layout()
         createDismissKeyboardTapGesture()
         bind()
+        addSettingsButton()
     }
     
     private func bind() {
@@ -79,7 +97,19 @@ class TBCalculatorViewController: UIViewController {
         splitInputView.snp.makeConstraints { make in
             make.height.equalTo(56)
         }
+        /*
+         settingsButton.snp.makeConstraints { make in
+         make.top.equalTo(view.snp.topMargin).offset(16)
+         make.trailing.equalTo(view.snp.trailingMargin).offset(-16)
+         }
+         */
     }
+    
+    @objc private func didTapSettingsButton() {
+        let settingsViewController = TBSettingsViewController()
+        navigationController?.pushViewController(settingsViewController, animated: true)
+    }
+    
     
     func createDismissKeyboardTapGesture() {
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))

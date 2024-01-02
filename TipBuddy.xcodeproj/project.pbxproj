@@ -31,6 +31,7 @@
 		A27542142B3EB10100719E63 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27542132B3EB10100719E63 /* Tip.swift */; };
 		A27542172B3EBB8900719E63 /* TBOperatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27542162B3EBB8900719E63 /* TBOperatorButton.swift */; };
 		A28694222B3DBDD0006B011B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A28694212B3DBDD0006B011B /* SnapKit */; };
+		A2C970D92B442E510027B6AF /* TBSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C970D82B442E510027B6AF /* TBSettingsViewController.swift */; };
 		A2DA0EA22B3D7E4A00B2861F /* TBAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EA12B3D7E4900B2861F /* TBAmountView.swift */; };
 		A2DA0EA42B3D7EC700B2861F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EA32B3D7EC700B2861F /* UIView+Extension.swift */; };
 		A2DA0EA82B3D8B1500B2861F /* TBHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EA72B3D8B1500B2861F /* TBHeaderView.swift */; };
@@ -64,6 +65,7 @@
 		A275420F2B3EAF2B00719E63 /* TBPercentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBPercentButton.swift; sourceTree = "<group>"; };
 		A27542132B3EB10100719E63 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		A27542162B3EBB8900719E63 /* TBOperatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBOperatorButton.swift; sourceTree = "<group>"; };
+		A2C970D82B442E510027B6AF /* TBSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSettingsViewController.swift; sourceTree = "<group>"; };
 		A2DA0EA12B3D7E4900B2861F /* TBAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBAmountView.swift; sourceTree = "<group>"; };
 		A2DA0EA32B3D7EC700B2861F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A2DA0EA72B3D8B1500B2861F /* TBHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBHeaderView.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				A228196F2B398AE10046CF1C /* TBCalculatorViewController.swift */,
+				A2C970D82B442E510027B6AF /* TBSettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				A25EB48D2B3C16AF00359A91 /* TBSplitInputView.swift in Sources */,
 				A228196E2B398AE10046CF1C /* SceneDelegate.swift in Sources */,
 				A25EB4932B3C286600359A91 /* ThemeColor.swift in Sources */,
+				A2C970D92B442E510027B6AF /* TBSettingsViewController.swift in Sources */,
 				A2E6E6182B4327B7009F4468 /* Int+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,7 +498,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -524,7 +528,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

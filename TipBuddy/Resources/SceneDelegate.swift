@@ -11,12 +11,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
-    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        let calculatorViewController = TBCalculatorViewController()
+        let navigationController = UINavigationController(rootViewController: calculatorViewController)
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = TBCalculatorViewController()
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
     
