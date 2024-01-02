@@ -15,7 +15,7 @@ class TBResultView: UIView {
     private let amountPerPersonLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        let text = NSMutableAttributedString(string: "$0", attributes: [.font: ThemeFont.bold(ofSize: 48), .foregroundColor: UIColor.black])
+        let text = NSMutableAttributedString(string: 0.currencyFormatted, attributes: [.font: ThemeFont.bold(ofSize: 48), .foregroundColor: UIColor.black])
         text.addAttributes([.font: ThemeFont.bold(ofSize: 24), .foregroundColor: UIColor.black], range: NSMakeRange(0, 1))
         label.attributedText = text
         return label
