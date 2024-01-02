@@ -11,6 +11,8 @@ import SnapKit
 class TBResultView: UIView {
     
     private let headerLabel = TBLabel(text: "Total p/person", font: ThemeFont.demibold(ofSize: 18), textColor: .black)
+    private let totalBillView = TBAmountView(title: "Total Bill", textAlignment: .left, amountLabelIdentifier: "$0")
+    private let totalTipView = TBAmountView(title: "Total Tip", textAlignment: .right, amountLabelIdentifier: "$0")
     
     private let amountPerPersonLabel: UILabel = {
         let label = UILabel()
@@ -33,9 +35,6 @@ class TBResultView: UIView {
         stackView.spacing = 10
         return stackView
     }()
-    
-    private let totalBillView = TBAmountView(title: "Total Bill", textAlignment: .left, amountLabelIdentifier: "$0")
-    private let totalTipView = TBAmountView(title: "Total Tip", textAlignment: .right, amountLabelIdentifier: "$0")
     
     private lazy var horizontalStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [totalBillView, UIView(), totalTipView])

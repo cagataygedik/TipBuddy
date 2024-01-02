@@ -105,11 +105,55 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		A22526DD2B3E0B1400B6CAF4 /* ViewControllers */ = {
+		A20CEB082B448CC600243F3D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A20CEAFF2B44783A00243F3D /* TBSettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A20CEB092B448CD000243F3D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A25EB4842B3C167400359A91 /* TBLogoView.swift */,
+				A25EB4862B3C167F00359A91 /* TBResultView.swift */,
+				A25EB4882B3C168E00359A91 /* TBBillInputView.swift */,
+				A25EB48A2B3C16A000359A91 /* TBTipInputView.swift */,
+				A25EB48C2B3C16AF00359A91 /* TBSplitInputView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A20CEB0A2B448CE000243F3D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A2C970D82B442E510027B6AF /* TBSettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A20CEB0B2B448CE600243F3D /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				A228196F2B398AE10046CF1C /* TBCalculatorViewController.swift */,
-				A2C970D82B442E510027B6AF /* TBSettingsViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A20CEB0C2B448D5A00243F3D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A23A5E742B4023AD0004B5A8 /* TBCalculatorViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A22526DD2B3E0B1400B6CAF4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A20CEB0B2B448CE600243F3D /* Main */,
+				A20CEB0A2B448CE000243F3D /* Settings */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -149,8 +193,8 @@
 		A23A5E732B4023990004B5A8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				A20CEB0C2B448D5A00243F3D /* Main */,
 				A20CEB012B44788000243F3D /* Settings */,
-				A23A5E742B4023AD0004B5A8 /* TBCalculatorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -169,12 +213,8 @@
 		A25EB4832B3C146D00359A91 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A25EB4842B3C167400359A91 /* TBLogoView.swift */,
-				A25EB4862B3C167F00359A91 /* TBResultView.swift */,
-				A25EB4882B3C168E00359A91 /* TBBillInputView.swift */,
-				A25EB48A2B3C16A000359A91 /* TBTipInputView.swift */,
-				A25EB48C2B3C16AF00359A91 /* TBSplitInputView.swift */,
-				A20CEAFF2B44783A00243F3D /* TBSettingsView.swift */,
+				A20CEB092B448CD000243F3D /* Main */,
+				A20CEB082B448CC600243F3D /* Settings */,
 			);
 			path = Views;
 			sourceTree = "<group>";

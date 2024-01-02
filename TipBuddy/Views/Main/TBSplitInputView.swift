@@ -45,6 +45,10 @@ class TBSplitInputView: UIView {
             quantityLabel.text = quantity.stringValue
         }.store(in: &cancellables)
     }
+    
+    func reset() {
+        splitSubject.send(1)
+    }
 
     override init(frame: CGRect) {
         super.init(frame: .zero)

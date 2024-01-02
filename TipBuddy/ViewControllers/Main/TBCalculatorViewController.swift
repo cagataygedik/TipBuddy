@@ -30,24 +30,20 @@ class TBCalculatorViewController: UIViewController {
         stackView.spacing = 36
         return stackView
     }()
-    
-    /*
-     private lazy var settingsButton: UIButton = {
-     let button = UIButton(type: .system)
-     button.setImage(UIImage(systemName: "gear"), for: .normal)
-     button.addTarget(self, action: #selector(didTapSettingsButton), for: .touchUpInside)
-     button.tintColor = ThemeColor.primaryColor
-     return button
-     }()
-     */
-    
+
     private func addSettingsButton() {
         let settingsButton = UIBarButtonItem(title: nil, image: UIImage(systemName: "gear"), target: self, action: #selector(didTapSettingsButton))
         navigationItem.rightBarButtonItem = settingsButton
     }
     
+    private func addResetButton() {
+        let resetButton = UIBarButtonItem(title: nil, image: UIImage(systemName: "arrow.clockwise"), target: self, action: #selector(didTapResetButton))
+        navigationItem.leftBarButtonItem = resetButton
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        addResetButton()
         navigationController?.navigationBar.tintColor = ThemeColor.primaryColor
         layout()
         createDismissKeyboardTapGesture()
@@ -97,23 +93,21 @@ class TBCalculatorViewController: UIViewController {
         splitInputView.snp.makeConstraints { make in
             make.height.equalTo(56)
         }
-        /*
-         settingsButton.snp.makeConstraints { make in
-         make.top.equalTo(view.snp.topMargin).offset(16)
-         make.trailing.equalTo(view.snp.trailingMargin).offset(-16)
-         }
-         */
     }
     
+    @objc private func didTapResetButton() {
+        billInputView.reset()
+        tipInputView.reset()
+        splitInputView.reset()
+    }
+
     @objc private func didTapSettingsButton() {
         let settingsViewController = TBSettingsViewController()
         navigationController?.pushViewController(settingsViewController, animated: true)
     }
-    
     
     func createDismissKeyboardTapGesture() {
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tap)
     }
 }
-

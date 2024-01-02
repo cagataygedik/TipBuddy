@@ -118,6 +118,10 @@ class TBTipInputView: UIView {
         customTipButton.setAttributedTitle(text, for: .normal)
     }
     
+    func reset() {
+        tipSubject.send(.none)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         layout()

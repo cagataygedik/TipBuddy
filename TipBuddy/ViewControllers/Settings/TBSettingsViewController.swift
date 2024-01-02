@@ -66,7 +66,8 @@ final class TBSettingsViewController: UIViewController {
         } else if option == .contributor {
             // Show contributor alert
             let alert = UIAlertController(title: "Made in 🇹🇷", message: "by Celil Cagatay Gedik", preferredStyle: .alert)
-            let perfectButton = UIAlertAction(title: "Perfect", style: .default, handler: nil)
+            alert.view.tintColor = ThemeColor.primaryColor
+            let perfectButton = UIAlertAction(title: "God Bless Him", style: .default, handler: nil)
             alert.addAction(perfectButton)
             present(alert, animated: true, completion: nil)
         }
