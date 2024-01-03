@@ -106,7 +106,9 @@ class TBTipInputView: UIView {
                 twentyPercentButton.backgroundColor = ThemeColor.secondaryColor
             case .customTip(let value):
                 customTipButton.backgroundColor = ThemeColor.secondaryColor
-                let text = NSMutableAttributedString(string: "$\(value)", attributes: [.font: ThemeFont.bold(ofSize: 20)])
+                let doubleValue = Double(value)
+                let formattedValue = doubleValue.currencyFormatted
+                let text = NSMutableAttributedString(string: "\(formattedValue)", attributes: [.font: ThemeFont.bold(ofSize: 20)])
                 text.addAttributes([.font: ThemeFont.bold(ofSize: 14)], range: NSMakeRange(0, 1))
                 customTipButton.setAttributedTitle(text, for: .normal)
             }
