@@ -55,7 +55,13 @@ final class TBSettingsViewController: UIViewController {
         }
         
         if let url = option.targetUrl {
-            // Open website
+            //open twitter
+            let twitterUrl = Strings.twitterUrl
+            if UIApplication.shared.canOpenURL(twitterUrl!) {
+                UIApplication.shared.open(twitterUrl!, options: [:], completionHandler: nil)
+                return
+            }
+            // Open website(if the user doesn't have twitter app on phone)
             let vc = SFSafariViewController(url: url)
             present(vc, animated: true)
         } else if option == .rateApp {

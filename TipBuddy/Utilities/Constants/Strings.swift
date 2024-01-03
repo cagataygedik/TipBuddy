@@ -8,5 +8,5 @@
 import Foundation
 
 struct Strings {
-    static let twitterUrl = ""
+    static let twitterUrl = URL(string: "https://twitter.com/messages/compose?recipient_id=1367151894")
 }

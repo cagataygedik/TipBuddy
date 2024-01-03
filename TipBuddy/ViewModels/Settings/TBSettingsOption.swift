@@ -17,7 +17,7 @@ enum TBSettingsOption: CaseIterable {
         case .rateApp:
             return nil
         case .contactUs:
-            return URL(string: "https://www.linkedin.com/in/celilcagataygedik/")
+            return Strings.twitterUrl
         case .contributor:
             return nil
         }
@@ -28,7 +28,7 @@ enum TBSettingsOption: CaseIterable {
         case .rateApp:
             return "Rate App"
         case .contactUs:
-            return "Contact Us"
+            return "Contact Me on X (Twitter)"
         case .contributor:
             return "Contributor"
         }
