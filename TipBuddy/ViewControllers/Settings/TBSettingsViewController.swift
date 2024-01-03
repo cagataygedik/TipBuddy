@@ -54,23 +54,35 @@ final class TBSettingsViewController: UIViewController {
             return
         }
         
+        let sixMonthsInSeconds: TimeInterval = 6 * 30 * 24 * 60 * 60
+        
         if let url = option.targetUrl {
-            //open twitter
             let twitterUrl = Strings.twitterUrl
             if UIApplication.shared.canOpenURL(twitterUrl!) {
                 UIApplication.shared.open(twitterUrl!, options: [:], completionHandler: nil)
                 return
             }
-            // Open website(if the user doesn't have twitter app on phone)
             let vc = SFSafariViewController(url: url)
             present(vc, animated: true)
+            
         } else if option == .rateApp {
-            // Show rating prompt
-            if let windowScene = view.window?.windowScene {
-                SKStoreReviewController.requestReview(in: windowScene)
+            let lastRatingDate = UserDefaults.standard.object(forKey: "LastRatingDate") as? Date
+
+            if let lastRatingDate = lastRatingDate,
+               Date().timeIntervalSince(lastRatingDate) < sixMonthsInSeconds {
+                let alert = UIAlertController(title: "You Have Already Rated the App", message: "Thank you for your great interest.", preferredStyle: .alert)
+                alert.view.tintColor = ThemeColor.primaryColor
+                let okAction = UIAlertAction(title: "Your Welcome", style: .default, handler: nil)
+                alert.addAction(okAction)
+                present(alert, animated: true, completion: nil)
+            } else {
+                if let windowScene = view.window?.windowScene {
+                    SKStoreReviewController.requestReview(in: windowScene)
+                }
+                UserDefaults.standard.set(Date(), forKey: "LastRatingDate")
             }
+            
         } else if option == .contributor {
-            // Show contributor alert
             let alert = UIAlertController(title: "Made in 🇹🇷", message: "by Celil Cagatay Gedik", preferredStyle: .alert)
             alert.view.tintColor = ThemeColor.primaryColor
             let perfectButton = UIAlertAction(title: "God Bless Him", style: .default, handler: nil)
