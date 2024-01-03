@@ -15,7 +15,6 @@
 		A228196C2B398AE10046CF1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196B2B398AE10046CF1C /* AppDelegate.swift */; };
 		A228196E2B398AE10046CF1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196D2B398AE10046CF1C /* SceneDelegate.swift */; };
 		A22819702B398AE10046CF1C /* TBCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A228196F2B398AE10046CF1C /* TBCalculatorViewController.swift */; };
-		A22819752B398AE20046CF1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A22819742B398AE20046CF1C /* Assets.xcassets */; };
 		A22819782B398AE20046CF1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22819762B398AE20046CF1C /* LaunchScreen.storyboard */; };
 		A23A5E752B4023AD0004B5A8 /* TBCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A5E742B4023AD0004B5A8 /* TBCalculatorViewModel.swift */; };
 		A23A5E772B4034CF0004B5A8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23A5E762B4034CF0004B5A8 /* Result.swift */; };
@@ -35,6 +34,7 @@
 		A27542142B3EB10100719E63 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27542132B3EB10100719E63 /* Tip.swift */; };
 		A27542172B3EBB8900719E63 /* TBOperatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27542162B3EBB8900719E63 /* TBOperatorButton.swift */; };
 		A28694222B3DBDD0006B011B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A28694212B3DBDD0006B011B /* SnapKit */; };
+		A2C77CD72B45713E00989089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C77CD62B45713E00989089 /* Assets.xcassets */; };
 		A2C970D92B442E510027B6AF /* TBSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C970D82B442E510027B6AF /* TBSettingsViewController.swift */; };
 		A2DA0EA22B3D7E4A00B2861F /* TBAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EA12B3D7E4900B2861F /* TBAmountView.swift */; };
 		A2DA0EA42B3D7EC700B2861F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DA0EA32B3D7EC700B2861F /* UIView+Extension.swift */; };
@@ -54,7 +54,6 @@
 		A228196B2B398AE10046CF1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A228196D2B398AE10046CF1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A228196F2B398AE10046CF1C /* TBCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBCalculatorViewController.swift; sourceTree = "<group>"; };
-		A22819742B398AE20046CF1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A22819772B398AE20046CF1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A22819792B398AE20046CF1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A23A5E742B4023AD0004B5A8 /* TBCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBCalculatorViewModel.swift; sourceTree = "<group>"; };
@@ -73,6 +72,7 @@
 		A275420F2B3EAF2B00719E63 /* TBPercentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBPercentButton.swift; sourceTree = "<group>"; };
 		A27542132B3EB10100719E63 /* Tip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
 		A27542162B3EBB8900719E63 /* TBOperatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBOperatorButton.swift; sourceTree = "<group>"; };
+		A2C77CD62B45713E00989089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../../Library/Mobile Documents/.Trash/Assets.xcassets"; sourceTree = "<group>"; };
 		A2C970D82B442E510027B6AF /* TBSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBSettingsViewController.swift; sourceTree = "<group>"; };
 		A2DA0EA12B3D7E4900B2861F /* TBAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBAmountView.swift; sourceTree = "<group>"; };
 		A2DA0EA32B3D7EC700B2861F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -202,8 +202,8 @@
 		A25EB4822B3C141300359A91 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A2C77CD62B45713E00989089 /* Assets.xcassets */,
 				A22819762B398AE20046CF1C /* LaunchScreen.storyboard */,
-				A22819742B398AE20046CF1C /* Assets.xcassets */,
 				A228196B2B398AE10046CF1C /* AppDelegate.swift */,
 				A228196D2B398AE10046CF1C /* SceneDelegate.swift */,
 			);
@@ -370,8 +370,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2C77CD72B45713E00989089 /* Assets.xcassets in Resources */,
 				A22819782B398AE20046CF1C /* LaunchScreen.storyboard in Resources */,
-				A22819752B398AE20046CF1C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
