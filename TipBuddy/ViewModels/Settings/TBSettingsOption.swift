@@ -10,15 +10,44 @@ import UIKit
 enum TBSettingsOption: CaseIterable {
     case rateApp
     case contactUs
-    case contributor
+    case developer
+    case privacyPolicy
     
-    var targetUrl: URL? {
+    var twitterTargetUrl: URL? {
         switch self {
         case .rateApp:
             return nil
         case .contactUs:
             return Strings.twitterUrl
-        case .contributor:
+        case .developer:
+            return nil
+        case .privacyPolicy:
+            return nil
+        }
+    }
+    
+    var privacyPolicyTargetUrl: URL? {
+        switch self {
+        case .rateApp:
+            return nil
+        case .contactUs:
+            return nil
+        case .developer:
+            return nil
+        case .privacyPolicy:
+            return Strings.privacyPolicyUrl
+        }
+    }
+    
+    var rateAppTargetUrl: URL? {
+        switch self {
+        case .rateApp:
+            return Strings.rateAppUrl
+        case .contactUs:
+            return nil
+        case .developer:
+            return nil
+        case .privacyPolicy:
             return nil
         }
     }
@@ -29,8 +58,10 @@ enum TBSettingsOption: CaseIterable {
             return "Rate App"
         case .contactUs:
             return "Contact Me on X (Twitter)"
-        case .contributor:
-            return "Contributor"
+        case .developer:
+            return "Developer"
+        case .privacyPolicy:
+            return "Privacy Policy"
         }
     }
     
@@ -40,8 +71,10 @@ enum TBSettingsOption: CaseIterable {
             return UIImage(systemName: "star")
         case .contactUs:
             return UIImage(systemName: "paperplane")
-        case .contributor:
-            return UIImage(systemName: "person")
+        case .developer:
+            return UIImage(systemName: "hammer")
+        case .privacyPolicy:
+            return UIImage(systemName: "doc.text")
         }
     }
     
@@ -51,7 +84,9 @@ enum TBSettingsOption: CaseIterable {
             return ThemeColor.primaryColor
         case .contactUs:
             return ThemeColor.primaryColor
-        case .contributor:
+        case .developer:
+            return ThemeColor.primaryColor
+        case .privacyPolicy:
             return ThemeColor.primaryColor
         }
     }

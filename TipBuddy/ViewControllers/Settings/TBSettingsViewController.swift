@@ -54,9 +54,7 @@ final class TBSettingsViewController: UIViewController {
             return
         }
         
-        let sixMonthsInSeconds: TimeInterval = 6 * 30 * 24 * 60 * 60
-        
-        if let url = option.targetUrl {
+        if let url = option.twitterTargetUrl {
             let twitterUrl = Strings.twitterUrl
             if UIApplication.shared.canOpenURL(twitterUrl!) {
                 UIApplication.shared.open(twitterUrl!, options: [:], completionHandler: nil)
@@ -65,29 +63,25 @@ final class TBSettingsViewController: UIViewController {
             let vc = SFSafariViewController(url: url)
             present(vc, animated: true)
             
-        } else if option == .rateApp {
-            let lastRatingDate = UserDefaults.standard.object(forKey: "LastRatingDate") as? Date
-
-            if let lastRatingDate = lastRatingDate,
-               Date().timeIntervalSince(lastRatingDate) < sixMonthsInSeconds {
-                let alert = UIAlertController(title: "You Have Already Rated the App", message: "Thank you for your great interest.", preferredStyle: .alert)
-                alert.view.tintColor = ThemeColor.primaryColor
-                let okAction = UIAlertAction(title: "Your Welcome", style: .default, handler: nil)
-                alert.addAction(okAction)
-                present(alert, animated: true, completion: nil)
-            } else {
-                if let windowScene = view.window?.windowScene {
-                    SKStoreReviewController.requestReview(in: windowScene)
-                }
-                UserDefaults.standard.set(Date(), forKey: "LastRatingDate")
+        } else if let url = option.rateAppTargetUrl {
+            let rateAppUrl = Strings.rateAppUrl
+            if UIApplication.shared.canOpenURL(rateAppUrl!) {
+                UIApplication.shared.open(rateAppUrl!, options: [:], completionHandler: nil)
+                return
             }
+            let vc = SFSafariViewController(url: url)
+            present(vc, animated: true)
             
-        } else if option == .contributor {
+        } else if option == .developer {
             let alert = UIAlertController(title: "Made in 🇹🇷", message: "by Celil Cagatay Gedik", preferredStyle: .alert)
             alert.view.tintColor = ThemeColor.primaryColor
             let perfectButton = UIAlertAction(title: "God Bless Him", style: .default, handler: nil)
             alert.addAction(perfectButton)
             present(alert, animated: true, completion: nil)
+            
+        } else if let url = option.privacyPolicyTargetUrl {
+            let vc = SFSafariViewController(url: url)
+            present(vc, animated: true)
         }
     }
 }
