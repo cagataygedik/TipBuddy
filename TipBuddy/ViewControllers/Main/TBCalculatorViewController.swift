@@ -12,7 +12,6 @@ import SwiftUI
 
 class TBCalculatorViewController: UIViewController {
     
-    //private let logoView = TBLogoView()
     private let resultView = TBResultView()
     private let billInputView = TBBillInputView()
     private let tipInputView = TBTipInputView()
@@ -80,12 +79,6 @@ class TBCalculatorViewController: UIViewController {
             make.right.equalTo(view.snp.rightMargin).offset(-16)
             make.bottom.equalTo(view.snp.bottomMargin).offset(-16)
         }
-        
-        /*
-         logoView.snp.makeConstraints { make in
-         make.height.equalTo(48)
-         }
-         */
         
         resultView.snp.makeConstraints { make in
             make.height.equalTo(224)
