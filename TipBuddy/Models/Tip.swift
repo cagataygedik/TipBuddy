@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Tip {
+enum Tip: Equatable {
     case none
     case tenPercent
     case fifteenPercent

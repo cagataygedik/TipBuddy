@@ -56,20 +56,29 @@ final class TBTipInputView: UIView {
     private var cancellables = Set<AnyCancellable>()
     
     private func configureButtons() {
-        tenPercentButton.tapPublisher.flatMap({
-            Just(Tip.tenPercent)
-        }).assign(to: \.value, on: tipSubject)
-            .store(in: &cancellables)
+        tenPercentButton.tapPublisher.sink { [weak self] _ in
+            if self?.tipSubject.value == .tenPercent {
+                self?.tipSubject.send(.none)
+            } else {
+                self?.tipSubject.send(.tenPercent)
+            }
+        }.store(in: &cancellables)
         
-        fifteenPercentButton.tapPublisher.flatMap({
-            Just(Tip.fifteenPercent)
-        }).assign(to: \.value, on: tipSubject)
-            .store(in: &cancellables)
+        fifteenPercentButton.tapPublisher.sink { [weak self] _ in
+            if self?.tipSubject.value == .fifteenPercent {
+                self?.tipSubject.send(.none)
+            } else {
+                self?.tipSubject.send(.fifteenPercent)
+            }
+        }.store(in: &cancellables)
         
-        twentyPercentButton.tapPublisher.flatMap({
-            Just(Tip.twentyPercent)
-        }).assign(to: \.value, on: tipSubject)
-            .store(in: &cancellables)
+        twentyPercentButton.tapPublisher.sink { [weak self] _ in
+            if self?.tipSubject.value == .twentyPercent {
+                self?.tipSubject.send(.none)
+            } else {
+                self?.tipSubject.send(.twentyPercent)
+            }
+        }.store(in: &cancellables)
     }
     
     private func handleCustomTipButton() {
