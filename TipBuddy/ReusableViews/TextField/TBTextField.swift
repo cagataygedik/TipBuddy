@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TBTextField: UITextField {
+final class TBTextField: UITextField {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
@@ -38,6 +38,9 @@ class TBTextField: UITextField {
     }
     
     @objc private func doneButtonTapped() {
+        if let text = text?.replacingOccurrences(of: ",", with: ".") {
+            self.text = text
+        }
         endEditing(true)
     }
 }

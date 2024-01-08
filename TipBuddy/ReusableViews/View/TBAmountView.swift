@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TBAmountView: UIView {
+final class TBAmountView: UIView {
     
     private let title: String
     private let textAlignment: NSTextAlignment

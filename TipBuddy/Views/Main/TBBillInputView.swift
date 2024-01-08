@@ -10,7 +10,7 @@ import SnapKit
 import Combine
 import CombineCocoa
 
-class TBBillInputView: UIView {
+final class TBBillInputView: UIView {
     
     private let headerView = TBHeaderView(topText: "Enter", bottomText: "your bill")
     private let textFieldContainerView = TBTextFieldContainerView()

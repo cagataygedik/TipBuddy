@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TBTextFieldContainerView: UIView {
+final class TBTextFieldContainerView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)

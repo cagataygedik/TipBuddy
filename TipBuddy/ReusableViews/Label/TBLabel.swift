@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TBLabel: UILabel {
+final class TBLabel: UILabel {
     
     convenience init(
         text: String?,

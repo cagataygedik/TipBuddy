@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class TBCalculatorViewModel {
+final class TBCalculatorViewModel {
     
     struct Input {
         let billPublisher: AnyPublisher <Double, Never>

@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class TBHeaderView: UIView {
+final class TBHeaderView: UIView {
     private let topText: String
     private let bottomText: String
     

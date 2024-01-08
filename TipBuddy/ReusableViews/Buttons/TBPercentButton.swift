@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TBPercentButton: UIButton {
+final class TBPercentButton: UIButton {
     private let tip: Tip
     
     init(tip: Tip) {

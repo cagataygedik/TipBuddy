@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class TBResultView: UIView {
+final class TBResultView: UIView {
     
     private let headerLabel = TBLabel(text: "Total p/person", font: ThemeFont.demibold(ofSize: 18), textColor: .black)
     private let totalBillView = TBAmountView(title: "Total Bill", textAlignment: .left, amountLabelIdentifier: "$0")

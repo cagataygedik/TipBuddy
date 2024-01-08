@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TBOperatorButton: UIButton {
+final class TBOperatorButton: UIButton {
     private let text: String
     private let corners: CACornerMask
     

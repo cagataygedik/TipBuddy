@@ -10,7 +10,7 @@ import SnapKit
 import Combine
 import CombineCocoa
 
-class TBTipInputView: UIView {
+final class TBTipInputView: UIView {
     
     private let headerView = TBHeaderView(topText: "Choose", bottomText: "your tip")
     private let tenPercentButton = TBPercentButton(tip: .tenPercent)
@@ -77,13 +77,13 @@ class TBTipInputView: UIView {
             let controller = UIAlertController(title: "Enter your tip", message: nil, preferredStyle: .alert)
             controller.addTextField { textField in
                 textField.placeholder = "Excite the waiter!"
-                textField.keyboardType = .numberPad
+                textField.keyboardType = .decimalPad
                 textField.autocorrectionType = .no
                 textField.clearButtonMode = .whileEditing
             }
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
             let doneAction = UIAlertAction(title: "Done", style: .default) { [weak self] _ in
-                guard let text = controller.textFields?.first?.text, let value = Int(text) else {return}
+                guard let text = controller.textFields?.first?.text?.replacingOccurrences(of: ",", with: "."), let value = Double(text) else {return}
                 self?.tipSubject.send(.customTip(value: value))
             }
             [doneAction, cancelAction].forEach(controller.addAction(_:))

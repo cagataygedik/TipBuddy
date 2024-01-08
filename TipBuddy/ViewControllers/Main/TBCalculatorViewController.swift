@@ -10,7 +10,7 @@ import SnapKit
 import Combine
 import SwiftUI
 
-class TBCalculatorViewController: UIViewController {
+final class TBCalculatorViewController: UIViewController {
     
     private let resultView = TBResultView()
     private let billInputView = TBBillInputView()
@@ -30,31 +30,12 @@ class TBCalculatorViewController: UIViewController {
         return stackView
     }()
     
-    private func addSettingsButton() {
-        let settingsButton = UIBarButtonItem(title: nil, image: UIImage(systemName: "gear"), target: self, action: #selector(didTapSettingsButton))
-        navigationItem.rightBarButtonItem = settingsButton
-    }
-    
-    private func addResetButton() {
-        let resetButton = UIBarButtonItem(title: nil, image: UIImage(systemName: "arrow.clockwise"), target: self, action: #selector(didTapResetButton))
-        navigationItem.leftBarButtonItem = resetButton
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBarTitle()
-        addResetButton()
-        navigationController?.navigationBar.tintColor = ThemeColor.primaryColor
+        configureNavigationBar()
         layout()
         createDismissKeyboardTapGesture()
         bind()
-        addSettingsButton()
-    }
-    
-    private func setupNavigationBarTitle() {
-        let imageView = UIImageView(image: UIImage(named: "image"))
-        imageView.contentMode = .scaleAspectFit
-        navigationItem.titleView = imageView
     }
     
     private func bind() {
@@ -95,6 +76,29 @@ class TBCalculatorViewController: UIViewController {
         splitInputView.snp.makeConstraints { make in
             make.height.equalTo(56)
         }
+    }
+    
+    private func configureNavigationBar() {
+        navigationController?.navigationBar.tintColor = ThemeColor.primaryColor
+        setupNavigationBarTitle()
+        addResetButton()
+        addSettingsButton()
+    }
+    
+    private func setupNavigationBarTitle() {
+        let imageView = UIImageView(image: UIImage(named: "image"))
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
+    }
+    
+    private func addResetButton() {
+        let resetButton = UIBarButtonItem(title: nil, image: UIImage(systemName: "arrow.clockwise"), target: self, action: #selector(didTapResetButton))
+        navigationItem.leftBarButtonItem = resetButton
+    }
+    
+    private func addSettingsButton() {
+        let settingsButton = UIBarButtonItem(title: nil, image: UIImage(systemName: "gear"), target: self, action: #selector(didTapSettingsButton))
+        navigationItem.rightBarButtonItem = settingsButton
     }
     
     @objc private func didTapResetButton() {

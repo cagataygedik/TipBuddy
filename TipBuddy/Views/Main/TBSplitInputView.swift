@@ -10,7 +10,7 @@ import SnapKit
 import Combine
 import CombineCocoa
 
-class TBSplitInputView: UIView {
+final class TBSplitInputView: UIView {
     
     private let headerView = TBHeaderView(topText: "Split", bottomText: "the total")
     private let decrementButton = TBOperatorButton(text: "-", corners: [.layerMinXMaxYCorner, .layerMinXMinYCorner])
