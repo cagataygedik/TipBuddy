@@ -69,14 +69,10 @@ final class TBResultView: UIView {
         addSubview(verticalStackView)
         
         verticalStackView.snp.makeConstraints { make in
-//            make.top.equalTo(snp.top).offset(24)
-//            make.left.equalTo(snp.left).offset(24)
-//            make.right.equalTo(snp.right).offset(-24)
-//            make.bottom.equalTo(snp.bottom).offset(-24)
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
             make.width.equalTo(300)
-            make.height.equalTo(180) // 180 ?? 200
+            make.height.equalTo(180)
         }
         
         horizontalLineView.snp.makeConstraints { make in
